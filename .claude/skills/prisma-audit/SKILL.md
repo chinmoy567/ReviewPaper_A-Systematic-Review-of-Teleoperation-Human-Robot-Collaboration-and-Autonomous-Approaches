@@ -19,4 +19,4 @@ Databases & platforms named · multi-database search · registries/grey lit · o
 - Sensitivity analysis: do headline findings hold excluding low-quality studies?
 
 ## Output format
-Table: Item | Status (✅ / ◐ / ❌ / N/A) | Where in manuscript | Fix. Then ranked fixes and LaTeX drop-ins. Never write that a step was done if the authors did not do it — draft wording as a template with `[AUTHORS: fill]` markers.
+Table: Item | Status (✅ / ◐ / ❌ / N/A) | Where in manuscript | Fix. Then ranked fixes and Markdown drop-ins. "Where in manuscript" means the location in `SAR_review_master_document.md` Secs. 9–14, the only manuscript source; never use `SAR_review_manuscript.tex` or any PDF of the paper. Never write that a step was done if the authors did not do it — draft wording as a template with `[AUTHORS: fill]` markers.

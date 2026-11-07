@@ -8,8 +8,8 @@ description: Turn real (or simulated) reviewer comments into a point-by-point re
 ## Steps
 1. Split the comments into atomic numbered items (R1.1, R1.2, R2.1 …). Keep the reviewer's wording verbatim in the letter.
 2. Classify each: **Agree-fix** / **Partially agree** / **Respectfully disagree (with evidence)** / **Requires author-only work** (new search, re-coding, quality scoring).
-3. For each, decide the manuscript change. Make edits in `SAR_review_manuscript.tex` (or via `academic-editor`), wrapping changed text in `\textcolor{blue}{...}` in a separate `_revised_marked.tex` copy if the journal wants highlighted changes (add `\usepackage{xcolor}`).
-4. Write the letter: `research_outputs/YYYY-MM-DD_response_to_reviewers.md` (and `.tex` if requested):
+3. For each, decide the manuscript change. Make edits in the manuscript text of `SAR_review_master_document.md` (Secs. 9–14 / Sec. 15 bibliography), directly or via `academic-editor`. This is the only manuscript source; never read or edit `SAR_review_manuscript.tex` or any PDF of the paper. Before editing, save a copy of the manuscript sections to `research_outputs/YYYY-MM-DD_manuscript_pre-revision.md`. If the journal wants highlighted changes, also write `research_outputs/YYYY-MM-DD_manuscript_revised_marked.md` with each changed passage wrapped in `<mark>…</mark>`.
+4. Write the letter: `research_outputs/YYYY-MM-DD_response_to_reviewers.md`:
    ```
    Comment R1.3: "<verbatim>"
    Response: We thank the reviewer… <what we did / why>.
@@ -17,4 +17,4 @@ description: Turn real (or simulated) reviewer comments into a point-by-point re
    ```
 5. Tone: grateful, specific, never defensive; disagreements backed by citations or data.
 6. Never claim work that was not done. Items needing author action get `[AUTHORS: complete — e.g. report κ = __]` placeholders and are listed at the top for the user.
-7. Log all changes in master doc Sec. 16, recompile, rerun `stats-consistency-checker` if any number changed.
+7. Log all changes in master doc Sec. 16, run the CLAUDE.md rule 7 consistency checks, and rerun `stats-consistency-checker` if any number changed.

@@ -10,6 +10,6 @@ Delegate to `journal-scout`. Rules:
 2. Confirm the journal publishes unsolicited review articles (some journals' reviews are invitation-only).
 3. Capture: word/page limits for reviews, abstract limit, reference style, LaTeX template, APC, OA options, median time to first decision, special issues on disaster/field robotics (a fitting special issue raises acceptance odds).
 4. Fit scoring for this paper: field robotics ✔, HRI/autonomy ✔, disaster management ✔, systematic-review method ✔.
-5. Strategy: list a primary, a secondary, and a safety Q1 option; note that switching from IEEEtran to Elsevier `elsarticle` / Springer `sn-jnl` templates requires reference-style conversion.
+5. Strategy: list a primary, a secondary, and a safety Q1 option; note the reference-style conversion each needs. The manuscript exists only as `SAR_review_master_document.md` (the old `.tex`/PDF are retired). The submission file, whether IEEEtran, Elsevier `elsarticle` or Springer `sn-jnl`, will be built fresh from the `.md` once the venue is chosen.
 
 Output: `research_outputs/YYYY-MM-DD_journal-scout_shortlist.md`, then ask the user to choose before reformatting.

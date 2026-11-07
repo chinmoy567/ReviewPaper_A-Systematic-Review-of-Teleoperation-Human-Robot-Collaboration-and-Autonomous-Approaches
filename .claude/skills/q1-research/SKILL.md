@@ -9,6 +9,8 @@ Goal: a manuscript that survives Q1 peer review. Q1 reviewers of systematic revi
 
 Read `.claude/CLAUDE.md` first. All outputs go to `research_outputs/` (create it if missing) with prefix `YYYY-MM-DD_`.
 
+**Manuscript source:** `SAR_review_master_document.md` only. The manuscript is Secs. 9–14, the bibliography is Sec. 15 and the figures are in `assets/figures/`. `SAR_review_manuscript.tex` and `review_paper_v34_final.pdf` are retired, so no stage may read or edit them. Tell every agent this when spawning it.
+
 ## Stages
 
 Run stages 1–5 in parallel (they are independent), then 6, then 7.
@@ -32,10 +34,10 @@ Read all stage outputs and write `research_outputs/YYYY-MM-DD_Q1_readiness_repor
 2. **Novelty status** per contribution (STANDS / HEDGE / THREATENED / PRE-EMPTED).
 3. **Fix plan** — one table, de-duplicated across agents, ranked by (rejection risk × ease). Columns: #, issue, evidence/source agent, fix, effort (S/M/L), who (authors-only vs. Claude-can-do).
    - Mark items **only the authors can do** (re-run database searches, blind re-coding for κ, OSF registration, quality scoring of papers they hold) — never simulate those results.
-4. **Drop-in text** for the top fixes Claude can do now (LaTeX).
+4. **Drop-in text** for the top fixes Claude can do now (Markdown, ready to paste into the `.md`).
 5. **Submission checklist** for the chosen venue.
 
-Then show the user the verdict + top 10 fixes and ask which to apply. Apply edits with `academic-editor` (or directly), recompile, and log every manuscript change in master doc Sec. 16.
+Then show the user the verdict + top 10 fixes and ask which to apply. Apply edits to the `.md` with `academic-editor` (or directly), run the CLAUDE.md rule 7 consistency checks, and log every manuscript change in master doc Sec. 16.
 
 ## Q1 bar — the checklist the pipeline must clear
 See `references/q1-standards.md`.
