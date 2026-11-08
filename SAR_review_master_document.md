@@ -60,6 +60,8 @@ The current live task, as of this handoff, is: **all 6 new figures (plus the pre
 
 **Internal audit note (kept here for the project's own record, not for the manuscript):** a number of records were originally located via Google Scholar and AI-assisted search prompts (ChatGPT, Gemini) before being manually retrieved and verified in full against their original publisher source; see the DOI-verified per-publisher breakdown below. This note documents actual process history for this project's own audit trail and must never be copied into manuscript text.
 
+**2026-11-08, supersedes the "Published framing" above (kept for the record).** Under CLAUDE.md rule 4 and the authors' Gate 1 answers of 2026-11-08, the manuscript now reports what was actually done: (i) one author ran the searches, through publisher platforms (78), Google Scholar (15) and AI-assisted discovery with ChatGPT (34) and Gemini (3); (ii) two people screened all records; (iii) an AI assistant extracted the data and drafted the prose, and the authors checked the output. The instruction "do not mention AI tools, Google Scholar, or any single-annotator framing" no longer applies, and the "three authors independently" claims have been removed from the manuscript.
+
 ### 2.3 Identification numbers
 
 - Total records catalogued: **130**
@@ -300,113 +302,180 @@ Both of these were independently found again during this handoff's prior-reviews
 
 ## 9. Manuscript draft — Methodology (Section II of the paper) *(updated — three-author process framing, corrected source counts, new Search Criteria subsection)*
 
-**Status: drafted in full, matches the compiled manuscript exactly.** Structured to match the model reference paper's (Kareem et al., 2026) Section II subsection pattern — now A through H, same letter count as the model paper, though the content per letter is this review's own design, not a forced match. Adapted to how this review's screening actually ran (a single-pass full-text screen against all three criteria at once, not the model paper's two-stage title/abstract-then-full-text funnel — see Section 9F below).
+**Status (2026-11-08): Section II below was rewritten from the authors' Gate 1 answers (one searcher; publisher platforms plus Google Scholar and AI-assisted discovery; two screeners; AI-assisted extraction). The note that follows describes the superseded version. See the Sec. 16 entry dated 2026-11-08.** **Superseded status:** drafted in full, matches the compiled manuscript exactly. Structured to match the model reference paper's (Kareem et al., 2026) Section II subsection pattern — now A through H, same letter count as the model paper, though the content per letter is this review's own design, not a forced match. Adapted to how this review's screening actually ran (a single-pass full-text screen against all three criteria at once, not the model paper's two-stage title/abstract-then-full-text funnel — see Section 9F below).
 
 ---
 
 ### II. METHODOLOGY
 
-This section presents the systematic literature review (SLR) protocol used to identify, screen, and extract data from the current literature on robotic systems for disaster search and rescue (SAR). The review follows PRISMA 2020 reporting guidelines and was conducted between 18–19 July 2026.
+This section describes how records were identified, screened, coded, and synthesized. Reporting follows the PRISMA 2020 statement [@page2021prisma] and, for the search, the PRISMA-S extension [@rethlefsen2021prismas]. The completed checklists for both are provided as supplementary material. Record identification and full-text screening took place in [[AUTHOR INPUT NEEDED: month(s) and year of searching and of screening; the earlier draft said screening took place on 18–19 July 2026, which the authors have not confirmed]].
 
 #### A. Research Questions
 
-Four research questions guided the review, structured around its central organizing contribution, a four-way autonomy/human-robot interaction (HRI) taxonomy:
+Four research questions guided the review. Each is organized around a four-mode autonomy/human-robot interaction (HRI) taxonomy, defined in Section II-G:
 
-**RQ1:** What autonomy/HRI mode (Teleoperation, Supervisory Control, Shared-Collaborative Control, or Fully Autonomous) characterizes each robotic SAR system reported in the 2025–2026 literature, and how is this distributed across the corpus?
+**RQ1:** Which autonomy/HRI mode (Teleoperation, Supervisory Control, Shared-Collaborative Control, or Fully Autonomous) characterizes each robotic search and rescue (SAR) system reported in the 2025–2026 literature, and how are the modes distributed across the corpus?
 
-**RQ2:** What robot platform types are being deployed for disaster SAR in this period, and how do platform choices relate to autonomy mode?
+**RQ2:** Which robot platform types are used for disaster SAR in this period, and how do platform choices relate to autonomy mode?
 
-**RQ3:** What perception/sensor configurations, computational architectures, and validation approaches (simulation vs. real-world) characterize current SAR robotic systems?
+**RQ3:** Which sensor configurations, computational architectures, and validation approaches (simulation, laboratory, or field) characterize current SAR robotic systems, and does validation depth differ by autonomy mode?
 
-**RQ4:** What disaster scenarios are being modeled in current research, and to what extent does the literature target hazard-specific conditions versus generic disaster environments?
+**RQ4:** Which disaster scenarios are modeled, and to what extent does the literature target hazard-specific conditions rather than generic disaster environments?
 
 #### B. Information Sources and Search Strategy
 
-Candidate records were identified from ten sources, summarized in Table II and Fig. 1: MDPI, Elsevier ScienceDirect, IEEE Xplore, Springer, Scientific Reports, PLOS One, Frontiers, Wiley, Tech Science Press, and ASCEE Publications. This identification process, conducted independently by the three authors of this review, catalogued 130 records in total.
+Records were identified by one author through two routes. They are reported separately in Table II and in the PRISMA diagram (Fig. 2).
 
-**TABLE II.** Records identified by source.
+1. **Publisher-platform searches (n = 78).** The author queried the native search interfaces of MDPI, Elsevier ScienceDirect, IEEE Xplore, Nature Portfolio (*Scientific Reports*), PLOS, Frontiers, and Wiley. The query was the phrase "rescue robot" on every platform except MDPI, where it was "disaster rescue robot". Results were limited to publications dated 2025 or later.
+2. **Identification via other methods (n = 52).** These records came from Google Scholar (n = 15) and from AI-assisted discovery (n = 37). Under AI-assisted discovery, the large language models ChatGPT (OpenAI; n = 34) and Gemini (Google; n = 3) were asked to suggest candidate papers. The Google Scholar queries were [[AUTHOR INPUT NEEDED: confirm which of the seven queries listed in the authors' search record were run, with any year filter: "rescue robot", "teleoperation", "search and rescue", "disaster management", "disaster search and rescue", "search and rescue robot", "disaster management robot"]]. The AI prompts were [[AUTHOR INPUT NEEDED: prompt wording, or a description of it, plus model versions and dates]]. Every AI-suggested record was retrieved from its publisher and its bibliographic details were checked against the publisher's page before it was cataloged. No record was accepted on the strength of an AI-generated description alone.
 
-| Source | Records |
-|---|---|
-| MDPI | 41 |
-| Elsevier ScienceDirect | 31 |
-| IEEE Xplore | 15 |
-| Springer | 14 |
-| Scientific Reports (Springer Nature) | 12 |
-| PLOS One | 6 |
-| Frontiers | 6 |
-| Tech Science Press | 3 |
-| Wiley | 1 |
-| ASCEE Publications | 1 |
-| **Total** | **130** |
+Cataloged records were grouped by publisher, using the DOI prefix (Table II). The search did not cover bibliographic databases such as Scopus and Web of Science, trial or protocol registers, or grey literature, and it included no citation chasing. AI-assisted discovery cannot be reproduced. Section V-D discusses these limits. [[AUTHOR INPUT NEEDED: if the supplementary Scopus/Web of Science/IEEE Xplore search in the supplementary search protocol is run, insert its date, strings, and yield here and add it to Fig. 2; otherwise delete this note.]] Journal ranking was not used to decide inclusion [[AUTHOR INPUT NEEDED: confirm; every cataloged record carries a Q1/Q2 tag in the authors' record list]].
 
-![Fig. 1. Records identified by source (N = 130 catalogued records, DOI-verified by publisher).](assets/figures/fig_records_by_source.png)
+**TABLE II.** Records identified, by publisher and identification route.
 
-*Fig. 1. Records identified by source (N = 130 catalogued records, DOI-verified by publisher).*
+| Publisher (DOI prefix) | Publisher-platform search | Google Scholar | AI-assisted (ChatGPT/Gemini) | Total |
+|---|---|---|---|---|
+| MDPI | 34 | 5 | 2 | 41 |
+| Elsevier ScienceDirect | 18 | 3 | 10 | 31 |
+| IEEE Xplore | 5 | 2 | 8 | 15 |
+| Springer | 0 | 3 | 11 | 14 |
+| Scientific Reports (Springer Nature) | 8 | 1 | 3 | 12 |
+| PLOS One | 6 | 0 | 0 | 6 |
+| Frontiers | 4 | 0 | 2 | 6 |
+| Tech Science Press | 2* | 0 | 1 | 3 |
+| Wiley | 1 | 0 | 0 | 1 |
+| ASCEE Publications | 0 | 1 | 0 | 1 |
+| **Total** | **78** | **15** | **37** | **130** |
 
-#### C. Search Criteria
+\*Retrieved through the ScienceDirect search interface.
 
-The search terms "rescue robot" and "disaster rescue robot" were applied across the sources listed in Table II, with "disaster rescue robot" used as the primary term for MDPI and "rescue robot" for the remaining sources. All queries were restricted to publications from 2025 onward at the query level, rather than applied as a separate post-hoc screening criterion, so that the identification stage itself already matched this review's stated 2025–2026 scope (Section II-A).
+![Fig. 1. Records identified by publisher (N = 130 cataloged records, grouped by DOI prefix).](assets/figures/fig_records_by_source.png)
 
-#### D. Deduplication
+*Fig. 1. Records identified by publisher (N = 130 cataloged records, grouped by DOI prefix).*
 
-Duplicate records were identified by DOI matching across the full catalogue, with byte-level full-text comparison applied as a secondary confirmation in two cases. Five duplicate pairs were found and the later-appearing copy of each removed prior to screening, leaving 125 unique records.
+#### C. Deduplication
 
-#### E. Eligibility Criteria
+Duplicates were identified by matching DOIs across the full catalog. Five duplicate pairs were found. In four pairs the two PDF files were byte-identical (same MD5 checksum). In the fifth pair the text was identical but the files differed. The later-cataloged copy of each pair was removed: one from the publisher-platform route and four from other methods. This left 125 unique records.
 
-Each record was required to satisfy all three of the following criteria to be included:
+#### D. Eligibility Criteria
 
-**C1 — Disaster SAR Application Domain (Primary).** The paper must explicitly target disaster SAR as its primary stated application (post-earthquake rescue, urban SAR, flood response, wildfire rescue, collapsed-structure search, mine rescue, or maritime SAR) as the paper's primary framing rather than a cited example or future-work mention. Papers primarily addressing industrial, agricultural, medical, military, or general-IoT applications were excluded even where SAR was mentioned incidentally.
+A record was included only if it met all three criteria:
 
-**C2 — Robotic System with Active Operational Role.** The paper must present a robot, platform, or framework that actively performs or supports SAR operations, whether teleoperated, shared-autonomy, supervisory, or fully autonomous. The robot must be the operational agent, not merely a sensor platform, communication relay, or logistics tool.
+**C1, disaster SAR application domain.** The paper's primary stated application is disaster SAR, for example post-earthquake or collapsed-structure search, urban SAR, flood, wildfire, mine, wilderness, or maritime rescue. In operational terms, SAR has to frame the problem statement and the evaluation, not only the introduction or future work. Papers whose primary application is industrial, agricultural, medical, military, or general Internet of Things (IoT) were excluded even when they mentioned SAR in passing.
 
-**C3 — Empirical Contribution.** The paper must present system design with testing, experimental results, simulation studies, prototype evaluation, or field deployment. Opinion pieces, conceptual frameworks without evaluation, other systematic reviews, and editorial commentaries were excluded. For example, needs-assessment studies synthesizing practitioner survey and interview data about robot usage, such as Rajashekhar and Prabhakar [9], which combines a literature review, public survey, and first-responder interviews on post-earthquake robot usage, were excluded under these criteria despite covering closely related subject matter, since they do not themselves present or empirically test a robotic system.
+**C2, robotic system with an active operational role.** The paper presents a robot, or a robot-control framework, that performs or directly supports SAR tasks under any mode of control. Papers in which the robot serves only as a sensor carrier, communication relay, or logistics vehicle were excluded.
 
-An initial fourth criterion restricting eligibility to papers published in 2025 or later was considered but not retained as a formal criterion, since the identification-stage search queries (Section II-C) already restricted every catalogued record to this window before screening began; no record was screened against and failed a publication-year test.
+**C3, empirical contribution.** The paper evaluates its system by simulation, laboratory or bench experiment, prototype testing, or field deployment. Opinion pieces, conceptual frameworks with no evaluation, reviews, and editorials were excluded. For example, the needs-assessment study of Rajashekhar and Prabhakar [9] combines a literature review, a public survey, and interviews with first responders on post-earthquake robot use. It was excluded because it neither presents nor tests a robotic system.
 
-#### F. Screening Process
+The publication-year limit (2025 onward) was applied at the identification stage. For the AI-assisted records it was enforced by checking the publication date of each retrieved record. Peer-reviewed journal articles in English were eligible [[AUTHOR INPUT NEEDED: confirm that conference papers and non-English records were not eligible, or state the actual rule]].
 
-Unlike protocols that screen first by title/abstract and only later assess a reduced subset by full text, every one of the 125 unique records in this review had its full text retrieved and read in its entirety (methodology, results, and conclusion, not the abstract alone) before a decision was reached. This single-pass, full-text approach was adopted because several exclusions only became apparent past the abstract: papers whose abstracts mention "search and rescue" once or twice in the introduction but whose tested content, methodology, and conclusion never revisit it, or papers whose title and keywords suggest SAR relevance while their entire empirical section evaluates something else, such as generic vehicle-routing logistics, industrial teleoperation, an abstract path-planning algorithm with no robot embodiment, or a subjective user-survey of a conceptual mockup, among other patterns encountered repeatedly across the corpus.
+#### E. Screening Process
 
-Screening was performed independently by the three authors of this review. Each author assessed every record against all three eligibility criteria in order, recording the specific textual evidence supporting the decision and, for exclusions, the precise criterion (or combination of criteria) violated. The three independent sets of decisions were then compared record by record; where all three authors agreed, the decision was finalized directly, and where they disagreed, the record was discussed jointly until a consensus decision was reached. Screening proceeded across 12 sequential batches of 9–11 records each, completed over two days (18–19 July 2026). No record was left unresolved as an ambiguous "maybe": every one reached a final include/exclude decision, and both inclusion and exclusion decisions were logged in full, since the exclusion log is as necessary as the inclusion log for the review's audit trail and for avoiding re-litigating a paper that resurfaces under a different search query.
+All 125 unique records were screened in a single full-text pass rather than a title/abstract stage followed by a full-text stage. Several exclusions only became apparent beyond the abstract. Typical cases were papers that mention SAR as motivation but evaluate generic navigation, industrial teleoperation, or abstract routing problems.
 
-#### G. Data Extraction
+Two authors screened every record against C1–C3 independently and recorded, for each exclusion, every criterion it failed. [[AUTHOR INPUT NEEDED: who the two screeners were (initials); how disagreements were resolved, given that the screening record says the two sets of decisions were "averaged out", a term that has no meaning for include/exclude decisions; whether the per-screener decisions were kept.]] The screeners' separate decisions were not kept, so agreement between the screeners cannot be reported. Section V-D notes this as a limitation. Every record received a final include or exclude decision. The full screening log, with the reason for each decision, is provided as supplementary material.
 
-For each of the 39 included papers, 18 fields were extracted (Table III), anchored on this review's central taxonomy dimension, Autonomy/HRI Mode, under which every paper's SAR robotic system was resolved to exactly one of four categories: Teleoperation, Supervisory Control, Shared-Collaborative Control, or Fully Autonomous. Extraction was carried out independently by the three authors of this review, and the resulting field values were cross-checked against one another, with disagreements resolved by joint discussion before compiling the final extraction table. Borderline classification decisions (for example, distinguishing a nominally "high-level" voice interface that in practice relays one atomic motion command at a time from a genuine goal-level supervisory interface, or separating a servo-loop stabilization layer from an independent decision-making layer with real authority over the robot's next action) were resolved against seven explicit classification precedents established and logged during extraction, so that later, structurally similar papers were classified consistently with earlier ones rather than each being judged in isolation.
+After screening, as a post hoc check, an AI assistant re-applied C1–C3 to the full texts of a sample of 23 excluded records, chosen to over-represent borderline and multi-criterion cases. It agreed with the logged decision for 17 records, judged 4 as borderline, and flagged 2 (both excluded under C2 as abstract grid-world agents) as possibly eligible. These results are reported in Section V-D as a threat to validity. They were not used to change the screening decisions.
 
-Five further fields were reduced to clean bibliometric categories for quantitative reporting: Validation Type; Robot Platform Type (with an explicit rule bucketing any system combining two or more distinct platform classes, or two locomotion modes in one body, as "Hybrid/Multi-Platform"); Computational Architecture (classified by the platform's operational compute location at mission runtime rather than by where any underlying model was trained, to avoid the great majority of machine-learning-based papers defaulting to a "hybrid" label purely because training happened offline); Disaster Scenario Modeled; and Sensor Suite, which, because most papers reported several sensor modalities simultaneously, was represented as a non-mutually-exclusive multi-hot encoding across eleven sensor categories rather than forced into a single dominant category.
+#### F. Data Extraction
+
+Eighteen fields were extracted for each of the 39 included papers (Table III). Extraction was carried out by an AI assistant (see the AI-use statement) from the full texts supplied by the authors, under the field definitions and classification rules described below. [[AUTHOR INPUT NEEDED: which author(s) checked the extracted values, and how, e.g. every cell or a sample.]] The original extraction workbook was not retained. The extraction table released with this review was therefore rebuilt from the 39 full texts, with a page reference for every coded cell, and checked against the classifications reported here (supplementary material).
 
 **TABLE III.** Data extraction fields.
 
 | # | Field | # | Field |
 |---|---|---|---|
-| 1 | Paper ID | 10 | Perception/Detection Algorithm |
+| 1 | Record ID | 10 | Perception/Detection Algorithm |
 | 2 | Citation | 11 | Navigation/Path-Planning Method |
 | 3 | Journal/Venue | 12 | Computational Architecture |
 | 4 | DOI | 13 | Disaster Scenario Modeled |
 | 5 | Robot Platform Type | 14 | Validation Type |
 | 6 | Single- or Multi-Robot | 15 | Key Reported Metric/Result |
 | 7 | **Autonomy/HRI Mode** | 16 | Reported Advantage(s) |
-| 8 | HRI Interface/Modality | 17 | Reported Limitation(s)/Gap |
-| 9 | Sensor Suite | 18 | Notes |
+| 8 | HRI Interface/Modality | 17 | Reported Limitation(s) |
+| 9 | Sensor Suite | 18 | Notes and Classification Rationale |
 
-#### H. PRISMA Results
+Five fields were reduced to single clean categories for counting:
+- **Validation Type:** Simulation only; Partial (simulation plus limited physical testing); Real-world field test; Prototype bench test.
+- **Robot Platform Type:** a system that tests two or more platform classes, or that combines two locomotion modes in one body, is coded Hybrid/Multi-Platform.
+- **Computational Architecture:** coded by where computation runs during the mission, not by where any model was trained.
+- **Disaster Scenario:** coded by physical setting, not hazard mechanism. For example, a flash flood in a mountain valley is coded Wilderness/Mountain.
+- **Sensor Suite:** coded as ten independent modality flags plus a "no physical sensor modeled" flag, because most papers use several modalities.
 
-Fig. 2 presents the PRISMA 2020 flow diagram for this review. Of the 130 records catalogued, 5 duplicates were removed, leaving 125 unique records for screening. All 125 had full text retrieved and were assessed for eligibility (no record was excluded prior to full-text retrieval, and no record was unretrievable). This yielded 39 included studies and 86 excluded records, broken down by violated criterion in Table IV; because 12 of the excluded records violated more than one criterion, the per-criterion counts in Table IV sum to more than 86.
+Two further items were coded from each paper's own text:
+- **Human role modeled (yes/no):** whether a human (real or simulated) acts during the evaluated mission.
+- **Environmental-realism limitation (yes/no):** yes when the authors themselves state that the test environment omitted or idealized physical conditions of the target disaster (for example weather, wind, lighting, smoke, dust, vegetation, rubble, water current, or degraded positioning or communications), or that validation was confined to simulation or the laboratory, with real-environment testing left for future work. The item records only what the authors state, not what the reviewers judged to be missing.
 
-The full-text eligibility assessment and data extraction described above were performed independently by the three authors of this review. The three authors' independent findings were then compared, and only findings on which all three agreed were retained and written up in this review; disagreements were resolved through joint discussion rather than by a single arbitrating author.
+#### G. Autonomy/HRI Mode: Definitions and Decision Rules
 
-![Fig. 2. PRISMA 2020 flow diagram for record identification, screening, and inclusion.](assets/figures/prisma_diagram.png)
+**Theoretical grounding.** The four modes are coarse bands over the levels-of-automation (LOA) continuum. Sheridan and Verplank introduced that continuum as a ten-level scale running from full human control to full computer autonomy [@sheridan1978]. Parasuraman, Sheridan, and Wickens separated automation by function into four stages (information acquisition, information analysis, decision selection, and action implementation), each of which can be automated to a different degree [@parasuraman2000]. Endsley and Kaber showed that the allocation of monitoring, option generation, selection, and implementation shapes performance, situation awareness, and workload [@endsley1999]. Beer, Fisk, and Rogers carried this framework into human-robot interaction, defining levels of robot autonomy by which agent senses, plans, and acts [@beer2014]. The National Institute of Standards and Technology Autonomy Levels for Unmanned Systems (ALFUS) framework rates autonomy in context, with human independence as one of its axes [@alfus2008]. In rescue robotics specifically, Murphy identified operator workload, situation awareness, and team structure as the central HRI problems [@murphy2004]. Coarse banding of this kind has precedent in SAR. Bakzadeh et al. grouped mine-rescue platforms into three autonomy bands derived from the Sheridan–Verplank scale [6]. Table IV-a shows how the four modes used here map onto these frameworks.
 
-*Fig. 2. PRISMA 2020 flow diagram for record identification, screening, and inclusion.*
+**TABLE IV-a.** Correspondence between the review's four modes and established autonomy frameworks (approximate).
 
-**TABLE IV.** Exclusion breakdown by criterion (non-mutually-exclusive; a record violating more than one criterion is counted under each).
+| This review | Sheridan–Verplank LOA (approx.) | Holder of decision (stage 3) / action (stage 4) [@parasuraman2000] | Beer et al. [@beer2014] (approx.) |
+|---|---|---|---|
+| Teleoperation | 1–2 | Human / human; the robot may stabilize or execute | Teleoperation, assisted teleoperation |
+| Shared-Collaborative Control | 3–5, partitioned by function | Split by function or by asset between the human and a machine decision layer | Decision support, shared control |
+| Supervisory Control | 5–7, at mission level | Robot, under human goal setting, consent, veto, or re-tasking / robot | Supervisory control |
+| Fully Autonomous | 8–10 | Robot / robot; no human role in the evaluated mission | Executive control, full autonomy |
+
+Shared-Collaborative Control is placed below Supervisory Control because the human keeps real-time authority over a class of task decisions. Under Supervisory Control the human only sets goals and intervenes. The modes are therefore treated as ordered bands, not equally spaced levels, and the boundary between Shared-Collaborative and Supervisory Control at level 5 (management by consent) is the least sharp. Each paper was coded by the control paradigm **as executed in its headline closed-loop evaluation**, whether that evaluation was in simulation or on physical hardware. How a pre-recorded dataset was collected was not treated as evidence of mode, and nor were designs the authors recommend but did not test.
+
+- **Teleoperation:** a human decides each individual motion or action in real time, through a joystick, radio controller, virtual-reality (VR) interface, or voice or graphical commands that each map to one atomic motion. Onboard stabilization or compliance loops that only carry out the human's command do not change the mode.
+- **Supervisory Control:** a human sets goals, waypoints, regions, or mission parameters and monitors progress. The robot's own planner sequences the actions. The human may re-task the robot or switch its autonomy level but does not drive individual actions.
+- **Shared-Collaborative Control:** authority over task decisions is split during the mission. An autonomous decision layer (not merely a servo loop) holds real authority over some task-relevant actions, while the human keeps real-time authority over others.
+- **Fully Autonomous:** no human makes or approves decisions during the evaluated mission. A human at most launches the system.
+
+Borderline cases were resolved with a single tie-break: who decides each action, and who decides only the goal, in the headline experiment. Every paper received exactly one primary mode. Secondary capabilities, such as an autonomous follow-me function on a teleoperated platform, were recorded in the Notes field. The coding manual, with worked boundary cases and the rationale for each paper's classification, is provided as supplementary material.
+
+**Classification reliability.** The original classification had a single coding stream. As a post hoc check, an AI assistant that had not seen the original labels coded all 39 papers from the full texts, using only the definitions above. It agreed with the original labels for 35 of 39 papers (89.7%; Cohen's κ = 0.79, 95% CI 0.61–0.97 [@cohen1960kappa]; Gwet's AC1 = 0.88 [@gwet2008ac1]). On the binary contrast between Fully Autonomous and modes with a human in the mission, it agreed for 37 of 39 papers (κ = 0.88). All four disagreements involved the Supervisory/Shared-Collaborative boundary or papers that report both manual and autonomous modes. These figures describe agreement between an AI coder and the original coding, not agreement between human raters. [[AUTHOR INPUT NEEDED: a co-author who did not assign the original labels should complete the blind human second-coding sheet provided in the supplementary material; report that κ here in place of, or alongside, the AI check.]]
+
+#### H. Quality Appraisal
+
+No established risk-of-bias instrument exists for primary studies in robotics engineering. Each included paper was therefore appraised with a two-dimension validation-depth and reproducibility (VDR) score, adapted from the 1–6 quality score of Kareem et al. [4]:
+
+- **Validation depth (VD):**
+  - 1: simulation in an abstract or idealized environment.
+  - 2: physics-based or high-fidelity simulation, or a physical laboratory or bench test.
+  - 3: a physical test in a mission-representative outdoor, field, or real-site environment.
+- **Reproducibility (RP):**
+  - 1: method described at a high level, with key parameters missing.
+  - 2: parameters and experimental setup reported in enough detail to re-implement.
+  - 3: as level 2, plus public code or data.
+
+The VDR score is VD + RP, giving a range of 2–6. The appraisal also recorded whether results came from repeated trials with reported variance, or from comparison against a baseline. VD partly overlaps with Validation Type by design. The sensitivity analysis therefore uses RP, which is independent of validation setting.
+
+#### I. Synthesis Methods
+
+The synthesis is descriptive. Proportions are reported with Wilson 95% confidence intervals (CIs) [@wilson1927]. The review's primary contrast compares the field-testing rate of Fully Autonomous papers with that of papers in which a human acts during the mission (Teleoperation, Supervisory Control, and Shared-Collaborative Control combined). It was tested with a two-sided Fisher's exact test and summarized by an odds ratio (OR) with an exact 95% CI. Two secondary analyses were run: a Freeman–Halton test across all four modes, and Fully Autonomous versus Teleoperation plus Supervisory Control. The platform comparisons are descriptive only, because platform is confounded with mode and the cells are small.
+
+All tests were chosen after the data had been tabulated. They are therefore exploratory, and no correction for multiplicity was applied. Three sensitivity analyses test the primary contrast:
+- (a) excluding papers whose evaluated setup models no human role;
+- (b) restricting to papers with RP ≥ 2;
+- (c) re-coding the boundary cases identified by the reliability check.
+
+Analysis scripts and the extraction table are provided as supplementary material.
+
+#### J. Protocol and Registration
+
+The review protocol was not registered, and no protocol was published in advance [[AUTHOR INPUT NEEDED: confirm; optionally deposit a retrospective record on OSF and cite it here]]. The eligibility criteria and coding rules were refined during screening and extraction, and the rules that resulted are reported in full above.
+
+#### K. PRISMA Flow
+
+Fig. 2 shows the flow of records. Of the 130 cataloged records, 78 were identified through publisher-platform searches and 52 through other methods. Five duplicates were removed, leaving 125 unique records: 77 from publisher platforms and 48 from other methods. All 125 were retrieved in full text and assessed for eligibility. In all, 39 studies were included (18 identified through publisher platforms and 21 through other methods) and 86 records were excluded. Table IV breaks the exclusions down by criterion violated. Twelve excluded records violated two criteria: C1 and C2 (6), C2 and C3 (5), and C1 and C3 (1). The per-criterion counts therefore sum to 98.
+
+![Fig. 2. PRISMA 2020 flow diagram, with records identified through publisher-platform searches and through other methods (Google Scholar and AI-assisted discovery) shown separately.](assets/figures/prisma_diagram_v2.png)
+
+*Fig. 2. PRISMA 2020 flow diagram, with records identified through publisher-platform searches and through other methods (Google Scholar and AI-assisted discovery) shown separately.*
+
+**TABLE IV.** Exclusions by criterion violated (non-exclusive: a record violating two criteria is counted under each).
 
 | Criterion violated | n |
 |---|---|
-| C1 — not disaster SAR domain | 63 |
-| C2 — no active robotic SAR role | 28 |
-| C3 — no empirical validation | 7 |
+| C1, not disaster SAR domain | 63 |
+| C2, no active robotic SAR role | 28 |
+| C3, no empirical evaluation | 7 |
+| *Records violating two criteria* | *12 (C1+C2 6; C2+C3 5; C1+C3 1)* |
 
 ---
 
@@ -1023,6 +1092,47 @@ Also downloaded the co-authors' shared Drive folder assets (see `.claude/CLAUDE.
 **Update (same day):** the user downloaded the whole Drive folder locally as `assect from drive/`. All 130 PDFs matched the manifest by name and byte size. The 55 missing ones were copied in, so `assets/papers/` now holds **130/130** verified PDFs (1.1 GB). Also added to `assets/docs/`: `paperlinks.xlsx` plus 7 screening/analysis `.docx` files that weren't visible through the Drive connector (Screening Process, Selection Process, Selection List, Selection List (Only Accepted Papers), Title and Criteria, Criteria Distribution Analysis, Yearly Distribution Analysis). Added `prisma.pdf` to `assets/prisma/`; it is the old diagram. The Figures/PRISMA files in that download are byte-identical to the ones already in `assets/`.
 
 ---
+
+**[2026-11-08, Q1 revision session, entry 1: Methods rewritten truthfully (audit IDs C1, I-1 to I-9, I-11, I-12, M1–M3, M7–M9, m9, m13, m14, m22)]**
+- **What changed:** manuscript Section II was replaced in full.
+  - The "three authors independently searched/screened/extracted" claims were removed.
+  - II-B now reports one searcher and two identification routes: publisher platforms (78) and other methods (Google Scholar 15; ChatGPT 34; Gemini 3).
+  - Table II now gives a per-route breakdown.
+  - II-C corrects the byte-identity count (4 of 5 pairs).
+  - II-D operationalizes C1.
+  - II-E reports two screeners, with no per-screener records kept, plus a post hoc AI-assisted check of 23 excluded records.
+  - II-F reports AI-assisted extraction and the rebuilt extraction table.
+  - II-G adds the theory grounding (Sheridan–Verplank, Parasuraman et al., Endsley & Kaber, Beer et al., ALFUS, Murphy), a mapping table, explicit mode definitions, a single closed-loop decision rule that resolves the Precedent B/E conflict, and the post hoc AI reliability check (κ = 0.79).
+  - New subsections: II-H VDR quality appraisal; II-I synthesis methods (Wilson CIs, Fisher, exploratory label, sensitivity analyses); II-J registration.
+  - II-K now holds the per-route PRISMA flow and the pair breakdown under Table IV.
+  - Fig. 2 now points to the new two-column `assets/figures/prisma_diagram_v2.png`, built by `data/make_prisma_v2.py`. The old `prisma_diagram.png` is kept, not deleted.
+- **Why:** CLAUDE.md rule 4, and the authors' Gate 1 answers (AskUserQuestion, 2026-11-08): (1) "Records are right, 1 author"; (2) "2 people screened all", while the other three statements went unticked: per-screener sheets exist; 18–19 July in 12 batches; quartile used as a filter; (3) "AI extracted + drafted".
+- **Evidence:**
+  - `assets/docs/paperlinks.xlsx`, tabulated 2026-11-08: 78/15/34/3; duplicates removed 1 portal + 4 other; included 18 portal + 21 other.
+  - `supplementary/screening_log.csv`: per-route exclusions 59 (C1 42, C2 21, C3 3, 7 multi) and 27 (C1 21, C2 7, C3 4, 5 multi).
+  - `research_outputs/2026-11-08_excluded-record-auditor_report.md`
+  - `research_outputs/2026-11-08_reliability-coder_report.md`
+  - `research_outputs/2026-11-08_taxonomy-theorist_full_audit.md` §3
+- **Open `[[AUTHOR INPUT NEEDED]]` markers in II:**
+  - search and screening dates
+  - Google Scholar queries actually run
+  - AI prompts and versions
+  - screener identities, and what "averaged out" meant
+  - who checked the AI extraction
+  - document-type and language rules
+  - quartile-filter confirmation
+  - supplementary database search
+  - human second coder
+  - registration
+- **Not yet done:** new references are still `[@key]` tokens (renumbering pending), and table numbering is pending (Table IV-a is a temporary label).
+
+**[2026-11-08, entry 2: LOCKED FACT AT RISK, reported to the authors and NOT applied]** The extraction rebuild (`research_outputs/2026-11-08_extraction-rebuilder_report.md`) could not reproduce 35/39 (89.7%) environmental-realism limitations under an explicit author-stated rule. Clear N codes so far: [10], [11], [16], [22], plus borderline [17]. Corpus auditors A, B and C independently found further candidate N codes: [31], [35], [37], [44], [47], [48]. The Abstract, V-B, Contribution 4 and the Conclusion depend on this number, so they are left unchanged pending the authors' decision. Full re-coding of [25]–[48] is in progress.
+
+**[2026-11-08, entry 3: author decisions (AskUserQuestion, 2026-11-08)]**
+1. **Environmental realism:** use the strict, author-stated rule. The manuscript will report whatever the strict recount gives, with the rule stated in II-F.
+2. **Validation:** use strict coding as the primary analysis. Mock and lab facilities ([15], [16], [17] and similar) are coded Partial/Bench, and the original lenient coding is reported as a sensitivity analysis.
+3. **Screening:** not reopened. The #70/#83 versus #14 C2 inconsistency is reported as a threat to validity, with a sensitivity projection.
+4. **Venue quartile:** to be verified through the user's own Chrome browser.
 
 ## 17. Figures (item 11) — built and embedded *(new this handoff)*
 

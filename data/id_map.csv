@@ -1,0 +1,40 @@
+ref_N,record_id,pdf_path
+10,6,assets/papers/Q1 06 Design and testing of a universal platform for search and rescue operation Exploring indoor and outdoor potentials.pdf
+11,77,assets/papers/Q2 77 A Novel Amphibious Terrestrial–Aerial UAV Based on Separation Cage Structure for Search and Rescue Missions.pdf
+12,116,assets/papers/Q1 116 Mechanical structure design and locomotion control framework for a wheeled hexapod rescue device.pdf
+13,5,assets/papers/Q1 05 Enhancing earthquake response with AI Real-time human detection using deep learning and robotic systems.pdf
+14,45,assets/papers/Q1 45 Design and implementation of a smart earthquake rescue robot to enhance rescue operations.pdf
+15,57,assets/papers/Q2 57 Digital Twin of Coal Mine Rescue Robot—Research on Intelligence and Visualization.pdf
+16,73,assets/papers/Q2 73 Sampling-Based Path Planning and Semantic Navigation for Complex Large-Scale Environments †.pdf
+17,106,assets/papers/Q2 106 A framework for semantics-based situational awareness during mobile robot deployments.pdf
+18,119,assets/papers/Q1 119 Terrain-Aware Probabilistic Search Planning for Uncrewed Aerial Vehicles.pdf
+19,105,assets/papers/Q2 105 Robot movement based inference of teleoperator state for multi-robot search.pdf
+20,113,assets/papers/Q1 113 AI-Enhanced Rescue Drone with Multi-Modal Vision and Cognitive Agentic Architecture.pdf
+21,126,assets/papers/Q1 126 Resilient MR-based human-swarm interaction for UAV search and rescue in risk-conflict scenarios.pdf
+22,9,assets/papers/Q1 09 Localization-Driven Multi-Robot Exploration for Indoor Search and Rescue.pdf
+23,15,assets/papers/Q1 15 A multi-UAV rapid post-disaster search and rescue method based on deep reinforcement learning.pdf
+24,25,assets/papers/Q1 25 Energy-aware multi-robot exploration and coverage in fragmented unknown environments using collaborative reinforcement learning.pdf
+25,30,assets/papers/Q1 30 Multi-agent reinforcement curriculum learning for real unmanned ground vehicles.pdf
+26,43,assets/papers/Q1 43 End-to-end emergency response protocol for tunnel accidents augmentation with reinforcement learning.pdf
+27,47,assets/papers/Q1 47 A bio-inspired swarm UAV framework integrating thermal sensing and optimization-based coordination for efficient search and rescue operations.pdf
+28,52,assets/papers/Q2 52 UAV swarm safe coverage path planning with deep reinforcement learning.pdf
+29,56,assets/papers/Q2 56 Information-Driven Team Collaboration in RoboCup Rescue.pdf
+30,59,assets/papers/Q2 59 Research on Disaster Environment Map Fusion Construction and Reinforcement Learning Navigation Technology Based on Air–Ground Collaborative Multi-Heterogeneous Robot Systems.pdf
+31,72,assets/papers/Q2 72 Concurrent Multi-Robot Search of Multiple Missing Persons in Urban Environments.pdf
+32,87,assets/papers/Q2 87 Enhancing cellular-enabled collaborative robots planning through GNSS data for SAR scenarios.pdf
+33,114,assets/papers/Q1 114 Prediction-Based Dual-Stage Distributed Task Allocation for Maximizing Assignments in Search and Rescue Scenarios.pdf
+34,8,assets/papers/Q1 08 Enabling robots to autonomously search dynamic cluttered post-disaster environments.pdf
+35,14,assets/papers/Q1 14 An energy aware Q-learning framework for comprehensive coverage path planning in unknown complex environments.pdf
+36,20,assets/papers/Q1 20 A Low-Cost Experimental Quadcopter Drone Design for Autonomous Search-and-Rescue Missions in GNSS-Denied Environments.pdf
+37,46,assets/papers/Q1 46 Autonomous Navigation for Mobile Robots in Emergency Rescue.pdf
+38,51,assets/papers/Q2 51 AI-Enhanced Thermal–Visual–Inertial Odometry and Autonomous Planning for GPS-Denied Search-and- Rescue Robotics.pdf
+39,55,assets/papers/Q2 55 Navigation in a Search Pointer Robot for Victim Detection in Volcanic Eruption Using Hybrid GPS-Inertial Navigation System.pdf
+40,82,assets/papers/Q2 82 Research on Navigation and Dynamic Symmetrical Path Planning Methods for Automated Rescue Robots in Coal Mines.pdf
+41,11,assets/papers/Q1 11 Enhancing search and rescue missions for victim detection using a coordinated bio-inspired dual-altitude UAV swarm framework.pdf
+42,17,assets/papers/Q1 17 Enhancing UAV Search Under Occlusion Using Next Best View Planning.pdf
+43,66,"assets/papers/Q2 66 Towards Intelligent Water Safety Robobuoy, a Deep Learning-Based Drowning Detection and Autonomous Surface Vehicle Rescue System.pdf"
+44,100,assets/papers/Q2 100 Improved Target Detection in Unmanned Aerial Vehicles Search and Rescue via V-Circular Trajectory Optimization.pdf
+45,124,assets/papers/Q1 124 PB-PAPP An Efficient Mechanism for Real-Time Survivor Detection in Disaster Regions.pdf
+46,22,assets/papers/Q1 22 Bio-inspired risk-aware adaptive navigation for quadruped robots in search and rescue scenarios.pdf
+47,53,assets/papers/Q2 53 IMPACT-Agent Intelligent Multimodal Prompt-Driven Agent for Collaborative Teaming.pdf
+48,54,assets/papers/Q2 54 Hexapod robot for enhancing emergency response in disaster scenarios.pdf
