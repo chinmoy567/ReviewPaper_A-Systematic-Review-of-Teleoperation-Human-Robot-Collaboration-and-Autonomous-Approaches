@@ -1134,6 +1134,31 @@ Also downloaded the co-authors' shared Drive folder assets (see `.claude/CLAUDE.
 3. **Screening:** not reopened. The #70/#83 versus #14 C2 inconsistency is reported as a threat to validity, with a sensitivity projection.
 4. **Venue quartile:** to be verified through the user's own Chrome browser.
 
+**[2026-11-08, entry 4: venue confirmed]** The target venue is the *Journal of Field Robotics* (Wiley). Its SJR 2025 quartile was verified as Q1 in Computer Science Applications and in Control and Systems Engineering, in the user's Chrome. JCR is UNVERIFIED (it requires a login). The journal accepts review papers. Evidence: `research_outputs/2026-11-08_venue_verification_chrome.md`. The authors confirmed the venue by AskUserQuestion on 2026-11-08.
+
+**[2026-11-08, entry 5: REBUILT DATA CHANGE LOCKED FACTS, reported to the authors and NOT yet applied to the manuscript]**
+
+`data/extraction_table.csv` holds all 39 papers re-coded from their PDFs, with page references. The recount was re-run independently with `scipy` on 2026-11-08.
+
+Agreement with the manuscript:
+- All 39 mode labels and all 39 platform labels agree with the manuscript.
+
+Changes under the authors' primary (strict) coding:
+- **Validation marginals:** Simulation 18 / Partial 12 / Field 6 / Bench 3. The manuscript has 18/10/8/3.
+- **Fully Autonomous (FA) field-tested:** 2/27, unchanged in count, but the field-tested papers are [36] and [44].
+- **Supervisory field-tested:** 1/4, against 3/4 in the manuscript. [15] and [16] are Partial.
+- **Teleoperation field-tested:** 3/5, unchanged.
+- **FA vs. human-in-mission:** 2/27 vs 4/12, Fisher p = 0.060. Under lenient coding it is 3/27 vs 6/12, p = 0.014; the audit's earlier value was p = 0.0056.
+- **Platform field-testing:** UAV 3/13 and Hybrid 3/7. The manuscript has 1/13 and 4/7.
+- **Environmental realism, literal rule:** 26/39. The broad rule gives 33/39. The manuscript has 35/39.
+- **Generic vs. hazard-specific realism:** 14/24 vs 12/15. This reverses the manuscript's direction (20/21 vs 15/18).
+- **Not-locked tables:** Tables VIII, IX and XII also change.
+
+Evidence and decision:
+- Evidence: `research_outputs/2026-11-08_extraction-rebuilder_report.md` and `data/recomputed_tables.md`.
+- The Results, Abstract and Conclusion are left unchanged pending the authors' decision.
+- Caveat: the rebuilt codes are themselves single-stream AI coding. The borderline calls are listed for human verification.
+
 ## 17. Figures (item 11) — built and embedded *(new this handoff)*
 
 **Status: all 7 figures (PRISMA + 6 new) built, embedded in `SAR_review_manuscript.tex`, and verified in a clean `pdflatex` build.**
