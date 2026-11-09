@@ -21,7 +21,7 @@
 - **Search dates:** `[[AUTHOR INPUT NEEDED: date of each search, or at least the month and year of the last search per source]]`. (An earlier draft gave screening dates of 18–19 July 2026; the authors have not confirmed them.)
 - **Year limit:** publications dated 2025 or later. Cataloged records: 61 dated 2025 and 69 dated 2026.
 
-### 1.2 Table S1. Searches and other identification methods, as run
+### 1.2 Table SP-1. Searches and other identification methods, as run
 
 "Cataloged" is the number of records the searcher entered into the catalog from that source. It is **not** the number of hits the search returned. If the hit counts were not recorded, the manuscript must say so (see the audit report, drop-in D1).
 
@@ -96,7 +96,7 @@ robot*, UAV, UAVs, drone*, "unmanned aerial", "unmanned ground", UGV, UGVs, "unm
 
 ### 2.4 Strings
 
-Copy each string exactly. Record any change the platform forces (term limits, wildcard limits, syntax errors) in Table S2, with the string as finally run.
+Copy each string exactly. Record any change the platform forces (term limits, wildcard limits, syntax errors) in Table SP-2, with the string as finally run.
 
 **S-1. Scopus** (www.scopus.com, Advanced document search):
 
@@ -119,7 +119,7 @@ AND ( LIMIT-TO ( LANGUAGE , "English" ) )
 ```
 
 - `TITLE-ABS-KEY` searches title, abstract and keywords (author and indexed).
-- Record the hit count **before** the DOCTYPE and LANGUAGE limits and **after** them (two numbers in Table S2).
+- Record the hit count **before** the DOCTYPE and LANGUAGE limits and **after** them (two numbers in Table SP-2).
 - Scopus treats double-quoted text as a loose phrase and allows wildcards inside it. Confirm that the platform accepts `"rescue robot*"`; if not, replace it with `"rescue robot" OR "rescue robots"` and record the change.
 
 **S-2. Web of Science Core Collection** (www.webofscience.com, Advanced Search):
@@ -161,12 +161,12 @@ AND
 ```
 
 - Filters (left panel): Year 2025–2026; Content type: Journals and Early Access Articles `[[AUTHOR INPUT NEEDED: plus Conferences only if conference papers are made eligible]]`.
-- "All Metadata" covers title, abstract, index terms and author keywords, but not full text. It is broader than Scopus TITLE-ABS-KEY; note this in Table S2.
+- "All Metadata" covers title, abstract, index terms and author keywords, but not full text. It is broader than Scopus TITLE-ABS-KEY; note this in Table SP-2.
 - The IEEE string uses only two wildcards, because IEEE Xplore caps the number of wildcards per search. Its help pages give different caps in different versions, so check the current Command Search help. If Xplore rejects the string as too long, split Block A into two halves (IEEE-1: the first nine Block A terms; IEEE-2: the remaining nine), run each with the full Block B, merge by DOI, and record both strings and both counts.
 
 **Optional S-4. ACM Digital Library** (dl.acm.org, Advanced Search; Title and Abstract fields; publication date 2025–2026), using Blocks A and B unchanged. This is recommended only if the authors decide to admit conference papers, since most ACM robotics content is proceedings.
 
-### 2.5 What to record for every search (Table S2)
+### 2.5 What to record for every search (Table SP-2)
 
 | Field | S-1 Scopus | S-2 WoS CC | S-3 IEEE Xplore |
 |---|---|---|---|
@@ -197,7 +197,7 @@ Also record:
 
 ### 2.8 Recall test against the existing corpus (search validation)
 
-- **Gold set:** the 39 included studies (DOIs in `data/extraction_table.csv`, column `doi`).
+- **Gold set:** the 39 included studies (DOIs in `S2_extraction_table.csv` (= `data/extraction_table.csv`), column `doi`).
 - For each database, report: (i) how many of the 39 the database indexes (look each DOI up directly); (ii) how many the string retrieved; (iii) recall = retrieved / indexed.
 - Report combined recall across S-1 to S-3 = (gold-set studies retrieved by at least one database) / 39.
 - If combined recall is below 90%, inspect the missed studies' titles, abstracts and keywords. Add the missing synonyms to Blocks A or B, re-run, and report both versions.

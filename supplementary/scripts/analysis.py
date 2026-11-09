@@ -34,12 +34,40 @@ def fmt(k, n):
     return f"{k}/{n} ({100*k/n:.1f}%; 95% CI {lo:.1f}–{hi:.1f})"
 
 
+CONTRAST_P = {}
+
+
+def freeman_halton_2col(table):
+    """Exact Freeman-Halton test for an r x 2 table by full enumeration of tables with fixed margins."""
+    from math import comb
+    rows_n = [a + b for a, b in table]; k = sum(a for a, _ in table); N = sum(rows_n)
+    def prob(col):
+        num = 1
+        for c, n in zip(col, rows_n):
+            num *= comb(n, c)
+        return num / comb(N, k)
+    p0 = prob([a for a, _ in table]); tot = 0.0
+    def rec(i, rem, acc):
+        nonlocal tot
+        if i == len(rows_n) - 1:
+            if rem <= rows_n[i]:
+                pr = prob(acc + [rem])
+                if pr <= p0 * (1 + 1e-9):
+                    tot += pr
+            return
+        for c in range(0, min(rem, rows_n[i]) + 1):
+            rec(i + 1, rem - c, acc + [c])
+    rec(0, k, [])
+    return tot
+
+
 def contrast(label, a, n1, b, n2):
     t = [[a, n1 - a], [b, n2 - b]]
     p = fisher_exact(t)[1]
     orr = odds_ratio(t, kind="conditional")
     ci = orr.confidence_interval(0.95)
     P(f"| {label} | {fmt(a,n1)} | {fmt(b,n2)} | {orr.statistic:.2f} ({ci.low:.3f}–{ci.high:.2f}) | {p:.4f} |")
+    CONTRAST_P[label] = p
     return p
 
 
@@ -150,7 +178,16 @@ P(f"Reproducibility (RP 1–3), FA vs human-in-mission: mean {np.mean([int(r['rp
 
 for col, lab in [("validation_strict", "strict"), ("validation_lenient", "lenient")]:
     t = [[sum(r["mode_clean"] == m and r[col] == FIELD for r in rows), sum(r["mode_clean"] == m and r[col] != FIELD for r in rows)] for m in MODES]
-    P(f"4 × 2 mode × field ({lab}) Monte Carlo exact test (200,000 permutations, seed 1): p = {rxc_perm_p(t):.4f}; table {t}.")
+    P(f"4 × 2 mode × field ({lab}) exact Freeman–Halton test (full enumeration): p = {freeman_halton_2col(t):.4f}; Monte Carlo check (200,000 permutations, seed 1): p = {rxc_perm_p(t):.4f}; table {t}.")
+
+# Holm adjustment over the five Table XIII contrasts (strict field, lenient field, any physical, VD=3, FA vs Tele+Sup)
+fam = {"Field strict": CONTRAST_P["Field, strict: FA vs human-in-mission"], "Field lenient": CONTRAST_P["Field, lenient: FA vs human-in-mission"],
+       "Any physical": CONTRAST_P["Any physical test: FA vs human-in-mission"], "VD=3": CONTRAST_P["VD = 3 (mission-representative site): FA vs human-in-mission"],
+       "FA vs Tele+Sup strict": CONTRAST_P["Field, strict: FA vs Tele+Sup"]}
+order = sorted(fam, key=fam.get); m = len(order); run = 0; adj = {}
+for i, k in enumerate(order):
+    run = max(run, min(1, (m - i) * fam[k])); adj[k] = run
+P("Holm-adjusted p (family of 5 contrasts): " + "; ".join(f"{k} {fam[k]:.4f} -> {adj[k]:.3f}" for k in fam) + ".")
 
 lit = cnt(rows, "env_realism_limitation", "Y"); br = cnt(rows, "env_realism_broad", "Y")
 P(f"\nEnvironmental-realism limitation, literal rule: {fmt(lit,39)}; broad rule: {fmt(br,39)}.")
@@ -184,6 +221,11 @@ rows_b = [dict(r, mode_blind=mapb[blind[r["ref_N"]]]) for r in rows]
 sens("(c) Mode re-coded with the blind AI codes (boundary cases)", rows_b, "mode_blind")
 extra = [dict(rows[0], mode_clean=FA, validation_strict="Simulation only", validation_lenient="Simulation only") for _ in range(2)]
 sens("(d) Adding excluded #70 and #83 as FA, simulation only (projection)", rows + extra)
+sens("(e) Only studies identified through publisher-platform searches", [r for r in rows if r["identification_route"] == "publisher"])
+P("\n### Identification route of included studies\n\n| Route | n | FA | Field strict |\n|---|---|---|---|")
+for rt in ("publisher", "other"):
+    s_ = [r for r in rows if r["identification_route"] == rt]
+    P(f"| {rt} | {len(s_)} | {sum(r['mode_clean']==FA for r in s_)} | {sum(r['validation_strict']==FIELD for r in s_)} |")
 
 open("data/analysis_output.md", "w", encoding="utf-8").write("\n".join(out) + "\n")
-print("\n".join(out))
+print("written data/analysis_output.md")

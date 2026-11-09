@@ -4,7 +4,7 @@ Use this manual to code the 39 included studies independently. The result lets t
 
 ## 1. Blinding: read this first
 - Code **only** from the full-text PDFs in `assets/papers/` (the filename is in `pdf_filename` in the sheet) and this manual.
-- **Do not** open the manuscript, `SAR_review_master_document.md`, `data/extraction_table.csv`, `data/reliability_blind_codes.csv`, anything in `research_outputs/`, or `assets/docs/` until you have finished and saved your sheet. Do not discuss individual papers with the first coder either.
+- **Do not** consult the manuscript, the released extraction table (S2) or the AI blind codes (S6) until you have finished and saved your sheet. Do not discuss individual papers with the first coder either.
 - The rows in `supplementary/human_second_coder_sheet.csv` are in shuffled order. Work in `sheet_order`. The `ref_N` column is only an identifier: in the manuscript the reference numbers are grouped by mode, so do not draw conclusions from them.
 - Once a code is saved, do not change it after you see the original labels. Any later correction goes in a separate column, with a reason.
 
@@ -53,7 +53,7 @@ These follow from the rules above. Record your reasoning in `notes` whenever one
    - the 4 × 4 confusion matrix;
    - the binary κ for Fully Autonomous vs. human-in-mission (T/S/C).
 3. Interpretation (Landis & Koch 1977, as a convention only): 0.61–0.80 substantial, 0.81–1.00 almost perfect. Report κ and AC1 together, because κ is depressed by prevalence imbalance.
-4. Resolve disagreements by discussion and record each one, with its resolution, in the revision log (master document Sec. 16). Report both the pre-discussion agreement and the final consensus labels in the paper.
+4. Resolve disagreements by discussion and record each one, with its resolution, in a dated decision log. Report both the pre-discussion agreement and the final consensus labels in the paper.
 5. If three or more coders take part, use Fleiss' κ across all of them, or Krippendorff's α (nominal).
 
 ## 6. Reporting
