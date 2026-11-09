@@ -324,7 +324,7 @@ Four research questions guided the review. Each is organized around a four-mode 
 
 #### B. Information Sources and Search Strategy
 
-Records were identified by one author through two routes. They are reported separately in Table II and in the PRISMA diagram (Fig. 2).
+Records were identified by one author through two routes. They are broken down by publisher in Table II and Fig. 1, and the two routes are shown separately in the PRISMA diagram (Fig. 2).
 
 1. **Publisher-platform searches (n = 78).** The author queried the native search interfaces of MDPI, Elsevier ScienceDirect, IEEE Xplore, Nature Portfolio (*Scientific Reports*), PLOS, Frontiers, and Wiley. The query was the phrase "rescue robot" on every platform except MDPI, where it was "disaster rescue robot". Results were limited to publications dated 2025 or later.
 2. **Identification via other methods (n = 52).** These records came from Google Scholar (n = 15) and from AI-assisted discovery (n = 37). Under AI-assisted discovery, the large language models ChatGPT (OpenAI; n = 34) and Gemini (Google; n = 3) were asked to suggest candidate papers. The Google Scholar queries were [[AUTHOR INPUT NEEDED: confirm which of the seven queries listed in the authors' search record were run, with any year filter: "rescue robot", "teleoperation", "search and rescue", "disaster management", "disaster search and rescue", "search and rescue robot", "disaster management robot"]]. The AI prompts were [[AUTHOR INPUT NEEDED: prompt wording, or a description of it, plus model versions and dates]]. Every AI-suggested record was retrieved from its publisher and its bibliographic details were checked against the publisher's page before it was cataloged. No record was accepted on the strength of an AI-generated description alone.
@@ -790,7 +790,7 @@ All three Shared-Collaborative studies use UAVs. Each assigns specific task deci
 - **Gaitan et al. (2025): radio-controlled UAV plus agentic layer.** The UAV is radio-controlled, and an LLM-orchestrated multi-agent layer filters and prioritizes what the operator sees. The paper is inconsistent about whether the payload release is triggered by the operator or by the agent. Validation took place in a controlled laboratory, against synthetic scenarios, without human participants. Detection of strongly occluded victims remained weak, with a per-class mAP@0.5 of 0.026–0.264 for the hardest occlusion classes.
 - **F. You et al. (2026): mixed-reality swarm interface.** The interface was evaluated in a simulated mountain-wilderness flash-flood scenario with 35 participants; physiological data were usable for 27. Compared with the same interface without its resilience features, it improved situation awareness and usability. Resilience was measured by questionnaire, and heart-rate variability was used to index workload and recovery.
 
-This is the least reproducible mode. In the independent blind check (Section II-G), (Gaitan et al., 2025) was read as Teleoperation and F. You et al. (2026) as Supervisory Control. Section V-D discusses the implications.
+This is the least reproducible mode. In the independent blind check (Section II-G), Gaitan et al. (2025) was read as Teleoperation and F. You et al. (2026) as Supervisory Control. Section V-D discusses the implications.
 
 #### D. Fully Autonomous (n = 27)
 
