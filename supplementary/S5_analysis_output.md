@@ -102,9 +102,9 @@
 | | Simulation only | Partial | Prototype bench test | Real-world field test | Total |
 |---|---|---|---|---|---|
 | Teleoperation | 1 | 1 | 0 | 3 | 5 |
-| Supervisory Control | 0 | 1 | 0 | 3 | 4 |
+| Supervisory Control | 0 | 2 | 0 | 2 | 4 |
 | Shared-Collaborative Control | 2 | 1 | 0 | 0 | 3 |
-| Fully Autonomous | 16 | 7 | 1 | 3 | 27 |
+| Fully Autonomous | 16 | 6 | 1 | 4 | 27 |
 | **Total** | 19 | 10 | 1 | 9 | 39 |
 
 ### Platform × validation (strict)
@@ -133,9 +133,9 @@
 | Mode | Field (strict) | Field (lenient) | Any physical test | Human role modeled | Mean VD | Mean RP | Mean VDR |
 |---|---|---|---|---|---|---|---|
 | Teleoperation | 3/5 (60.0%; 95% CI 23.1–88.2) | 3/5 (60.0%; 95% CI 23.1–88.2) | 4/5 (80.0%; 95% CI 37.6–96.4) | 3/5 | 2.40 | 2.00 | 4.40 |
-| Supervisory Control | 1/4 (25.0%; 95% CI 4.6–69.9) | 3/4 (75.0%; 95% CI 30.1–95.4) | 4/4 (100.0%; 95% CI 51.0–100.0) | 3/4 | 2.75 | 2.25 | 5.00 |
+| Supervisory Control | 1/4 (25.0%; 95% CI 4.6–69.9) | 2/4 (50.0%; 95% CI 15.0–85.0) | 4/4 (100.0%; 95% CI 51.0–100.0) | 3/4 | 2.75 | 2.25 | 5.00 |
 | Shared-Collaborative Control | 0/3 (0.0%; 95% CI 0.0–56.1) | 0/3 (0.0%; 95% CI 0.0–56.1) | 1/3 (33.3%; 95% CI 6.1–79.2) | 2/3 | 1.33 | 2.00 | 3.33 |
-| Fully Autonomous | 2/27 (7.4%; 95% CI 2.1–23.4) | 3/27 (11.1%; 95% CI 3.9–28.1) | 11/27 (40.7%; 95% CI 24.5–59.3) | 0/27 | 1.70 | 2.11 | 3.81 |
+| Fully Autonomous | 2/27 (7.4%; 95% CI 2.1–23.4) | 4/27 (14.8%; 95% CI 5.9–32.5) | 11/27 (40.7%; 95% CI 24.5–59.3) | 0/27 | 1.70 | 2.11 | 3.81 |
 | ALL | 6/39 (15.4%; 95% CI 7.2–29.7) | 9/39 (23.1%; 95% CI 12.6–38.3) | 20/39 (51.3%; 95% CI 36.2–66.1) | 8/39 | 1.87 | 2.10 | 3.97 |
 
 ### Platform rates
@@ -154,9 +154,9 @@
 | Contrast | Group 1 | Group 2 | OR (95% CI) | p |
 |---|---|---|---|---|
 | Field, strict: FA vs human-in-mission | 2/27 (7.4%; 95% CI 2.1–23.4) | 4/12 (33.3%; 95% CI 13.8–60.9) | 0.17 (0.013–1.43) | 0.0601 |
-| Field, lenient: FA vs human-in-mission | 3/27 (11.1%; 95% CI 3.9–28.1) | 6/12 (50.0%; 95% CI 25.4–74.6) | 0.13 (0.017–0.84) | 0.0141 |
+| Field, lenient: FA vs human-in-mission | 4/27 (14.8%; 95% CI 5.9–32.5) | 5/12 (41.7%; 95% CI 19.3–68.0) | 0.25 (0.038–1.54) | 0.1018 |
 | Field, strict: FA vs Tele+Sup | 2/27 (7.4%; 95% CI 2.1–23.4) | 4/9 (44.4%; 95% CI 18.9–73.3) | 0.11 (0.008–0.99) | 0.0245 |
-| Field, lenient: FA vs Tele+Sup | 3/27 (11.1%; 95% CI 3.9–28.1) | 6/9 (66.7%; 95% CI 35.4–87.9) | 0.07 (0.007–0.52) | 0.0027 |
+| Field, lenient: FA vs Tele+Sup | 4/27 (14.8%; 95% CI 5.9–32.5) | 5/9 (55.6%; 95% CI 26.7–81.1) | 0.15 (0.019–1.02) | 0.0262 |
 | Any physical test: FA vs human-in-mission | 11/27 (40.7%; 95% CI 24.5–59.3) | 9/12 (75.0%; 95% CI 46.8–91.1) | 0.24 (0.034–1.24) | 0.0824 |
 | VD = 3 (mission-representative site): FA vs human-in-mission | 4/27 (14.8%; 95% CI 5.9–32.5) | 6/12 (50.0%; 95% CI 25.4–74.6) | 0.18 (0.028–1.05) | 0.0427 |
 | Field, strict: UAV vs Hybrid (descriptive) | 3/13 (23.1%; 95% CI 8.2–50.3) | 3/7 (42.9%; 95% CI 15.8–75.0) | 0.42 (0.037–4.54) | 0.6126 |
@@ -165,8 +165,8 @@
 Validation depth (VD 1–3), FA vs human-in-mission: median 2 vs 2; mean 1.70 vs 2.25; Mann–Whitney U = 103.5, p = 0.0600.
 Reproducibility (RP 1–3), FA vs human-in-mission: mean 2.11 vs 2.08; Mann–Whitney p = 0.8269.
 4 × 2 mode × field (strict) exact Freeman–Halton test (full enumeration): p = 0.0291; Monte Carlo check (200,000 permutations, seed 1): p = 0.0272; table [[3, 2], [1, 3], [0, 3], [2, 25]].
-4 × 2 mode × field (lenient) exact Freeman–Halton test (full enumeration): p = 0.0058; Monte Carlo check (200,000 permutations, seed 1): p = 0.0062; table [[3, 2], [3, 1], [0, 3], [3, 24]].
-Holm-adjusted p (family of 5 contrasts): Field strict 0.0601 -> 0.128; Field lenient 0.0141 -> 0.071; Any physical 0.0824 -> 0.128; VD=3 0.0427 -> 0.128; FA vs Tele+Sup strict 0.0245 -> 0.098.
+4 × 2 mode × field (lenient) exact Freeman–Halton test (full enumeration): p = 0.0492; Monte Carlo check (200,000 permutations, seed 1): p = 0.0493; table [[3, 2], [2, 2], [0, 3], [4, 23]].
+Holm-adjusted p (family of 5 contrasts): Field strict 0.0601 -> 0.180; Field lenient 0.1018 -> 0.180; Any physical 0.0824 -> 0.180; VD=3 0.0427 -> 0.171; FA vs Tele+Sup strict 0.0245 -> 0.122.
 
 Environmental-realism limitation, literal rule: 26/39 (66.7%; 95% CI 51.0–79.4); broad rule: 33/39 (84.6%; 95% CI 70.3–92.8).
 Generic: literal 14/24 (58.3%; 95% CI 38.8–75.5); hazard-specific: literal 12/15 (80.0%; 95% CI 54.8–93.0).
@@ -177,13 +177,13 @@ Public code/data link (RP = 3): 5/39; baseline or variance reported: 35/39.
 
 | Analysis | n (FA / HM) | Field strict FA vs HM, p | Field lenient FA vs HM, p | Any physical test FA vs HM, p |
 |---|---|---|---|---|
-| Primary (all 39) | 27 / 12 | 2/27 vs 4/12, p = 0.060 | 3/27 vs 6/12, p = 0.014 | 11/27 vs 9/12, p = 0.082 |
-| (a) Only papers with a physical platform (excl. Abstract/Unspecified and sensor-free) | 17 / 12 | 2/17 vs 4/12, p = 0.198 | 3/17 vs 6/12, p = 0.106 | 11/17 vs 9/12, p = 0.694 |
+| Primary (all 39) | 27 / 12 | 2/27 vs 4/12, p = 0.060 | 4/27 vs 5/12, p = 0.102 | 11/27 vs 9/12, p = 0.082 |
+| (a) Only papers with a physical platform (excl. Abstract/Unspecified and sensor-free) | 17 / 12 | 2/17 vs 4/12, p = 0.198 | 4/17 vs 5/12, p = 0.422 | 11/17 vs 9/12, p = 0.694 |
 | (a') Only papers modeling a human role | 0 / 8 | not estimable | not estimable | not estimable |
-| (b) Only papers with RP ≥ 2 | 26 / 12 | 2/26 vs 4/12, p = 0.066 | 3/26 vs 6/12, p = 0.016 | 10/26 vs 9/12, p = 0.079 |
-| (c) Mode re-coded with the blind AI codes (boundary cases) | 27 / 12 | 3/27 vs 3/12, p = 0.348 | 4/27 vs 5/12, p = 0.102 | 11/27 vs 9/12, p = 0.082 |
-| (d) Adding excluded #70 and #83 as FA, simulation only (projection) | 29 / 12 | 2/29 vs 4/12, p = 0.050 | 3/29 vs 6/12, p = 0.011 | 11/29 vs 9/12, p = 0.043 |
-| (e) Only studies identified through publisher-platform searches | 14 / 4 | 2/14 vs 1/4, p = 1.000 | 2/14 vs 3/4, p = 0.044 | 6/14 vs 3/4, p = 0.576 |
+| (b) Only papers with RP ≥ 2 | 26 / 12 | 2/26 vs 4/12, p = 0.066 | 4/26 vs 5/12, p = 0.108 | 10/26 vs 9/12, p = 0.079 |
+| (c) Mode re-coded with the blind AI codes (boundary cases) | 27 / 12 | 3/27 vs 3/12, p = 0.348 | 5/27 vs 4/12, p = 0.416 | 11/27 vs 9/12, p = 0.082 |
+| (d) Adding excluded #70 and #83 as FA, simulation only (projection) | 29 / 12 | 2/29 vs 4/12, p = 0.050 | 4/29 vs 5/12, p = 0.093 | 11/29 vs 9/12, p = 0.043 |
+| (e) Only studies identified through publisher-platform searches | 14 / 4 | 2/14 vs 1/4, p = 1.000 | 3/14 vs 2/4, p = 0.533 | 6/14 vs 3/4, p = 0.576 |
 
 ### Identification route of included studies
 
@@ -191,3 +191,14 @@ Public code/data link (RP = 3): 5/39; baseline or variance reported: 35/39.
 |---|---|---|---|
 | publisher | 18 | 14 | 3 |
 | other | 21 | 13 | 3 |
+
+### Human in the evaluated mission × field testing
+
+| Coding | Human present: field | No human: field | Fisher p |
+|---|---|---|---|
+| validation_strict | 4/8 | 2/31 | 0.0105 |
+| validation_lenient | 5/8 | 4/31 | 0.0089 |
+
+### Identification route of human-in-the-loop studies
+
+Human-in-the-loop studies via other methods: 8/12; FA via other methods: 13/27.

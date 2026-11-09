@@ -227,5 +227,13 @@ for rt in ("publisher", "other"):
     s_ = [r for r in rows if r["identification_route"] == rt]
     P(f"| {rt} | {len(s_)} | {sum(r['mode_clean']==FA for r in s_)} | {sum(r['validation_strict']==FIELD for r in s_)} |")
 
+P("\n### Human in the evaluated mission × field testing\n\n| Coding | Human present: field | No human: field | Fisher p |\n|---|---|---|---|")
+hp = [r for r in rows if r["human_role_modelled"] == "Y"]; nh = [r for r in rows if r["human_role_modelled"] != "Y"]
+for col in ("validation_strict", "validation_lenient"):
+    a_ = sum(r[col] == FIELD for r in hp); b_ = sum(r[col] == FIELD for r in nh)
+    P(f"| {col} | {a_}/{len(hp)} | {b_}/{len(nh)} | {fisher_exact([[a_, len(hp)-a_], [b_, len(nh)-b_]])[1]:.4f} |")
+P("\n### Identification route of human-in-the-loop studies\n")
+P(f"Human-in-the-loop studies via other methods: {sum(r['identification_route']=='other' for r in hm)}/{len(hm)}; FA via other methods: {sum(r['identification_route']=='other' for r in fa_rows)}/{len(fa_rows)}.")
+
 open("data/analysis_output.md", "w", encoding="utf-8").write("\n".join(out) + "\n")
 print("written data/analysis_output.md")
