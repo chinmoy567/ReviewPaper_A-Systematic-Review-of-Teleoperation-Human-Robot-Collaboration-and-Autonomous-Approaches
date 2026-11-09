@@ -1125,7 +1125,7 @@ Sadman Adib Avi¹, Sadia Sultana¹, and Chinmoy Sarker¹*
 
 ### ABSTRACT
 
-Robots are increasingly proposed for disaster search and rescue (SAR), but their autonomy and their validation are rarely examined together. Following PRISMA 2020, one author cataloged 130 records published in 2025–2026. They were identified through publisher-platform searches (78), Google Scholar (15), and AI-assisted discovery (37). After deduplication, two reviewers screened 125 full texts against three eligibility criteria, and 39 studies were included. Each study was assigned one of four autonomy/human-robot interaction modes under explicit decision rules. Validation depth, self-reported realism limitations, and reproducibility were coded with page-level provenance. Fully Autonomous systems made up 69.2% of the corpus (27/39); the rest were Teleoperation (5), Supervisory Control (4), and Shared-Collaborative Control (3). None of the 27 Fully Autonomous studies evaluated a human role, and 16 were simulation-only. Their field-testing rate was 7.4% (95% CI 2.1–23.4), against 33.3% for human-in-the-loop modes (primary, strict coding; exploratory Fisher p = 0.060). Under lenient coding the rates were 14.8% vs. 41.7% (p = 0.10). No contrast survived multiplicity adjustment, and the difference weakened when abstract simulations were excluded or boundary cases re-coded. Field testing was associated more strongly with a human taking part in the evaluation than with designed mode. Two thirds of the studies acknowledged idealized test conditions, and 5 of 39 released code or data. Limitations include non-reproducible AI-assisted discovery, a narrow search, unrecorded screener agreement, and AI-assisted extraction. The review was not registered. The prevalence of autonomy in this literature should not be read as deployment readiness; we recommend that studies report validation depth, human roles, and per-function autonomy.
+Robots are increasingly proposed for disaster search and rescue (SAR), but their autonomy and their validation are rarely examined together. Following PRISMA 2020, one author cataloged 130 records published in 2025–2026. They were identified through publisher-platform searches (78), Google Scholar (15), and AI-assisted discovery (37). After deduplication, two reviewers screened 125 full texts against three eligibility criteria, and 39 studies were included. Each study was assigned one of four autonomy/human-robot interaction modes under explicit decision rules. Validation depth, self-reported realism limitations, and reproducibility were coded with page-level evidence. Fully Autonomous systems made up 69.2% of the corpus (27/39); the rest were Teleoperation (5), Supervisory Control (4), and Shared-Collaborative Control (3). None of the 27 Fully Autonomous studies evaluated a human role, and 16 were simulation-only. Their field-testing rate was 7.4% (95% CI 2.1–23.4), against 33.3% for human-in-the-loop modes (primary, strict coding; exploratory Fisher p = 0.060). Under lenient coding the rates were 14.8% vs. 41.7% (p = 0.10). No contrast survived multiplicity adjustment, and the difference weakened when abstract simulations were excluded or boundary cases re-coded. Field testing tracked human participation in the evaluation more than designed mode. Two thirds of the studies acknowledged idealized test conditions, and 5 of 39 released code or data. Limitations include non-reproducible AI-assisted discovery, a narrow search, unrecorded screener agreement, and AI-assisted extraction. The review was not registered. Autonomy's prevalence should not be read as deployment readiness; studies should report validation depth, human roles, and per-function autonomy.
 
 **Keywords:** disaster response, field validation, human-robot interaction, levels of autonomy, search and rescue robotics, sim-to-real gap, systematic review
 
@@ -1815,6 +1815,61 @@ Evidence for this round:
 - the human second-coder κ;
 - the AI-verification sentence;
 - repository DOI, funding, COI and CRediT.
+
+**[2026-11-09, entry 8: round-3 revision after the stats recheck and simulated Reviewer 2 round 2 (Reject; Minor requires the database search)]**
+
+Evidence for this round:
+- `research_outputs/2026-11-09_stats-checker_report_round2.md`
+- `research_outputs/2026-11-09_q1-reviewer_round2.md`
+- `research_outputs/2026-11-09_function-autonomy_report.md`
+
+*Data recodes.* All were made with PDF evidence and are logged in the `*_note` columns of `data/extraction_table.csv`.
+
+| Study | Change | Evidence |
+|---|---|---|
+| [20] Gaitan | Human in evaluated mission: Y → N | Synthetic scenarios, no participants (pp. 12, 25); confirmed by corpus audit A and the per-function coding |
+| [15] S. You | Lenient coding: Field → Partial | A laboratory mock tunnel is not a constructed outdoor course or competition venue, so it falls outside the lenient rule |
+| [25] Mead | Lenient coding: Partial → Field | Physical UGV on an outdoor fire-scenario course in grass and wind (p11). Strict coding stays Partial. |
+
+*Corrections to entry 7.* Entry 7 gave 9/39 studies with a human in the evaluated mission. After the [20] recode the correct figure is 8/39, and human-in-the-loop presence is 8/12.
+
+*Locked-fact consequences.* `.claude/CLAUDE.md` was updated.
+
+| Measure | Before | After |
+|---|---|---|
+| Lenient field testing, FA vs human-in-the-loop | 3/27 vs 6/12 (p = 0.014) | 4/27 vs 5/12 (p = 0.102) |
+| Supervisory field testing, lenient | 3/4 | 2/4 |
+| Freeman–Halton p, lenient | 0.006 | 0.049 |
+| Holm-adjusted p range | 0.071–0.128 | 0.12–0.18 |
+
+New cross-tabulation: field testing by human presence in the evaluated mission, 4/8 vs 2/31 (p = 0.011) strict and 5/8 vs 4/31 (p = 0.009) lenient. It is reported as partly circular.
+
+*Manuscript changes.*
+- **Open-loop coding rule (II-G).** Mode is the designed paradigm and human presence describes the evaluation; both are reported separately.
+- **IV-A.** "All five human-driven" corrected: all five are designed for human driving, and two evaluated perception offline.
+- **Table XX.** A note explains why function codes can differ from mode labels (pre-set targets; replay-only evaluation).
+- **III-D.** Human-presence × field-testing paragraph added, with the circularity caveat.
+- **V-A.** The genre explanation is now an explicitly untested hypothesis (contribution type was not coded).
+- **Table XIX.** S. You et al. replaced by Mead et al. under the corrected lenient rule, and a failure-mode bullet added.
+- **Drew (2021).** Misquote corrected: of at least 40 responses, four used three or more robots, and two of those involved some autonomy.
+- **Novelty wording softened.**
+  - Abstract: "rarely examined together".
+  - IV-E: the "no prior review" sentence was removed.
+  - Introduction: "apparent shift" removed.
+  - The Kareem et al. characterization now points to that review's Section III-F.
+- **Statistics wording.** "Four" changed to "Five sensitivity analyses"; the Holm family is defined; sensitivity p-values are stated as unadjusted; the null reproducibility result is no longer read as equivalence; the ambiguity of [48] is disclosed beside "none of the 27".
+- **Abstract.** Updated and trimmed to 243 words.
+
+*Supplement.*
+- Boundary rules A–G defined in the coding manual.
+- Public PRISMA checklists stripped of the internal audit column; the annotated versions were moved to `research_outputs/`.
+- Title updated in the supplement headers.
+- Stale numbers corrected in the PRISMA 2020 abstract checklist.
+- Screening-log record 61 deliberately left as logged: its "master prompt" wording is part of the authors' record of AI-assisted discovery and must not be concealed.
+
+*Submission file.* `submission/JFR_submission_manuscript.docx` was rebuilt from the `.md` with `data/build_docx.py` and converted to a PDF preview through Word (44 pages). Pages were inspected visually.
+
+*Stopping rule.* The simulated reviewer states that the text and data fixes plus author confirmations reach Major Revision, and that Minor Revision or acceptance requires the reproducible database search. The remaining blockers are therefore author actions. The reviewer loop is stopped under the mission's stopping rule.
 
 ## 17. Figures (item 11) — built and embedded *(new this handoff)*
 

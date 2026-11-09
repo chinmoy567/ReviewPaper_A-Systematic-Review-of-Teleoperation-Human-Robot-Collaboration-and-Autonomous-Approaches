@@ -1,6 +1,6 @@
 # Supplementary File: Search Protocol
 
-**Review:** *Who Holds the Decisions? A Systematic Review of Autonomy Modes and Validation Depth in Disaster Search-and-Rescue Robotics, 2025–2026* (Avi, Sultana, Sarker).
+**Review:** *Autonomy Modes and Validation Depth in Disaster Search-and-Rescue Robotics: A Systematic Review of the 2025–2026 Literature* (Avi, Sultana, Sarker).
 
 **Contents**
 1. The search actually run for this review (as reported in Section II-B).
@@ -304,7 +304,7 @@ Alternative: the PRISMA 2020 template for **updated reviews** has a "Studies inc
 
 The diagram script (`data/make_prisma_v2.py`) should read the counts from a CSV filled in by the authors, so that no number is typed by hand.
 
-### 5.2 Manuscript changes (master document; log each one in Sec. 16)
+### 5.2 Manuscript changes (record each change in the revision log)
 - **Section II-B:** add the database search as a third identification route: strings (pointing to this file), dates, editions, limits, PRESS review, and recall result. Revise the sentence "The search did not cover bibliographic databases such as Scopus and Web of Science".
 - **Table II:** add a "Bibliographic databases" column. **Fig. 1 and Fig. 2:** regenerate.
 - **Sections II-E and II-K:** new-record screening, κ, and counts.

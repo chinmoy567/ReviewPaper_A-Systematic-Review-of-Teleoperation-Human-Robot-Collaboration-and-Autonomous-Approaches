@@ -43,7 +43,7 @@ All images, diagrams, and supporting documents for this paper are in the co-auth
 - 130 records (78 publisher platforms + 15 Google Scholar + 34 ChatGPT + 3 Gemini) → 5 duplicates → 125 full-text screened → **39 included** (18 via publisher platforms, 21 via other routes), 86 excluded. Corpus window 2025–2026. The screening dates are NOT confirmed by the authors.
 - Autonomy/HRI split: Fully Autonomous 27 (69.2%), Teleoperation 5 (12.8%), Supervisory 4 (10.3%), Shared-Collaborative 3 (7.7%).
 - Validation, strict coding (primary): Simulation 19, Partial 12, Field 6, Bench 2. Lenient coding: 19 / 10 / 9 / 1.
-- FA field-tested: 2/27 strict (3/27 lenient). Human-in-the-loop modes: 4/12 strict (6/12 lenient). Fisher p = 0.060 strict (primary), 0.014 lenient. No contrast survives Holm adjustment.
+- FA field-tested: 2/27 strict (4/27 lenient). Human-in-the-loop modes: 4/12 strict (5/12 lenient). Fisher p = 0.060 strict (primary), 0.10 lenient. No contrast survives Holm adjustment (adjusted p = 0.12–0.18). Field testing by human presence in the evaluated mission: 4/8 vs 2/31 (p = 0.011), which is partly circular. The lenient coding was corrected in round 3 (2026-11-09, Sec. 16 entry 8).
 - No FA study has a human in the evaluated mission (0/27).
 - UAV field-tested 3/13 vs Hybrid 3/7 (p = 0.61; descriptive only).
 - Environmental-realism limitation, author-stated rule: 26/39 (66.7%); broad reading 33/39. Public code or data: 5/39.

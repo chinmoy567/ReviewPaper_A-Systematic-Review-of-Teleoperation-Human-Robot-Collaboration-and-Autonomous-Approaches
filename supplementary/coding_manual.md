@@ -58,3 +58,17 @@ These follow from the rules above. Record your reasoning in `notes` whenever one
 
 ## 6. Reporting
 State plainly who coded, whether the coders were independent and blinded, and when the coding was done. Report any earlier AI-assisted check separately, labelled as a post-hoc AI-assisted check and not as inter-rater agreement.
+
+## Boundary rules A–G (referenced in S3)
+
+These rules settle the recurring boundary cases. Each is a general statement; S3 shows which rule was applied to which study.
+
+- **A. Interface modality does not set the mode.** A voice, app or GUI command that triggers one atomic motion at a time, with the human deciding every action, is Teleoperation. Supervisory Control requires the human to give a goal, waypoint or region and the robot's planner to sequence the actions. Secondary capabilities that were not the evaluated behavior (e.g. a follow-me mode) are noted but do not change the label.
+- **B. Offline scoring of pre-recorded data does not change the mode.** If the algorithm runs as a closed loop in the headline (e.g. simulated) evaluation, code that paradigm, even when real-world data were collected by a human pilot and scored offline. Record the real-world gap, and code "human in evaluated mission" as N.
+- **C. Stabilization is not decision-making.** Human-commanded locomotion with onboard balance, compliance or attitude control is Teleoperation. Shared-Collaborative Control needs an independent decision layer with authority over what the robot does next.
+- **D. Piloting plus an autonomous decision layer is Shared-Collaborative Control.** A human pilots the platform while a separate decision system (not a servo loop) can independently trigger a task-relevant action.
+- **E. Code what was tested, not what is recommended.** If the paper recommends human oversight but its evaluated pipeline has none, code the evaluated pipeline (e.g. Fully Autonomous) and note the recommendation.
+- **F. A retained in-mission decision class is Shared-Collaborative Control.** An autonomous baseline in which a specific class of in-mission decision (e.g. approving a fault-recovery action) stays with the human is Shared-Collaborative Control. A human who only sets the initial goal and then monitors is Supervisory Control.
+- **G. Team-level sharing.** One asset is teleoperated, while a structurally separate autonomous team adapts its behavior to the human operator's inferred state. This is Shared-Collaborative Control at the team level.
+
+Known ambiguity: rules F and the Supervisory definition overlap at "management by consent" (Sheridan–Verplank level 5). This boundary produced most disagreements in the post hoc reliability check. Coders should record their confidence and rationale for any study near it.
