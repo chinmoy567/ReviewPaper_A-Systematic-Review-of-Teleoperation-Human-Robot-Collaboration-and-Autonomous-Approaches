@@ -327,7 +327,7 @@ Four research questions guided the review. Each is organized around a four-mode 
 Records were identified by one author through two routes. They are broken down by publisher in Table II and Fig. 1, and the two routes are shown separately in the PRISMA diagram (Fig. 2).
 
 1. **Publisher-platform searches (n = 78).** The author queried the native search interfaces of MDPI, Elsevier ScienceDirect, IEEE Xplore, Nature Portfolio (*Scientific Reports*), PLOS, Frontiers, and Wiley. The query was the phrase "rescue robot" on every platform except MDPI, where it was "disaster rescue robot". Results were limited to publications dated 2025 or later.
-2. **Identification via other methods (n = 52).** These records came from Google Scholar (n = 15) and from AI-assisted discovery (n = 37). Under AI-assisted discovery, the large language models ChatGPT (OpenAI; n = 34) and Gemini (Google; n = 3) were asked to suggest candidate papers. The Google Scholar queries were [[AUTHOR INPUT NEEDED: confirm which of the seven queries listed in the authors' search record were run, with any year filter: "rescue robot", "teleoperation", "search and rescue", "disaster management", "disaster search and rescue", "search and rescue robot", "disaster management robot"]]. The AI prompts were [[AUTHOR INPUT NEEDED: prompt wording, or a description of it, plus model versions and dates]]. Every AI-suggested record was retrieved from its publisher and its bibliographic details were checked against the publisher's page before it was cataloged. No record was accepted on the strength of an AI-generated description alone.
+2. **Identification via other methods (n = 52).** These records came from Google Scholar (n = 15) and from AI-assisted discovery (n = 37). Under AI-assisted discovery, the large language models ChatGPT (OpenAI; n = 34) and Gemini (Google; n = 3) were asked to suggest candidate papers. The Google Scholar queries were [[AUTHOR INPUT NEEDED: the record list logs only "rescue robot" (8 records) and "disaster rescue robot" (7 records) for Google Scholar, whereas the authors' search notes list seven queries ("rescue robot", "teleoperation", "search and rescue", "disaster management", "disaster search and rescue", "search and rescue robot", "disaster management robot"); confirm which were actually run, with any year filter]]. The AI prompts were [[AUTHOR INPUT NEEDED: prompt wording, or a description of it, plus model versions and dates]]. Every AI-suggested record was retrieved from its publisher and its bibliographic details were checked against the publisher's page before it was cataloged. No record was accepted on the strength of an AI-generated description alone.
 
 Cataloged records were grouped by publisher, using the DOI prefix (Table II). The search did not cover bibliographic databases such as Scopus and Web of Science, trial or protocol registers, or grey literature, and it included no citation chasing. AI-assisted discovery cannot be reproduced. Section V-D discusses these limits. [[AUTHOR INPUT NEEDED: if the supplementary Scopus/Web of Science/IEEE Xplore search in the supplementary search protocol is run, insert its date, strings, and yield here and add it to Fig. 2; otherwise delete this note.]] Journal ranking was not used to decide inclusion [[AUTHOR INPUT NEEDED: confirm; every cataloged record carries a Q1/Q2 tag in the authors' record list]].
 
@@ -447,12 +447,13 @@ The VDR score is VD + RP, giving a range of 2–6. The appraisal also recorded w
 
 #### I. Synthesis Methods
 
-The synthesis is descriptive. Proportions are reported with Wilson 95% confidence intervals (CIs; Wilson, 1927). The review's primary contrast compares the field-testing rate of Fully Autonomous papers with that of papers in which a human acts during the mission (Teleoperation, Supervisory Control, and Shared-Collaborative Control combined). It was tested with a two-sided Fisher's exact test and summarized by an odds ratio (OR) with an exact 95% CI. Two secondary analyses were run: a Freeman–Halton test across all four modes, and Fully Autonomous versus Teleoperation plus Supervisory Control. The platform comparisons are descriptive only, because platform is confounded with mode and the cells are small.
+The synthesis is descriptive. Proportions are reported with Wilson 95% confidence intervals (CIs; Wilson, 1927). The review's primary contrast compares the field-testing rate of Fully Autonomous papers with that of papers in which a human acts during the mission (Teleoperation, Supervisory Control, and Shared-Collaborative Control combined). It was tested with a two-sided Fisher's exact test and summarized by an odds ratio (OR) with an exact 95% CI. Two secondary analyses were run: an exact Freeman–Halton test of mode (four levels) against field testing, and Fully Autonomous versus Teleoperation plus Supervisory Control. Because validation depth (VD) is ordinal, it was compared between the two groups with a Mann–Whitney U test. The platform comparisons are descriptive only, because platform is confounded with mode and the cells are small.
 
-All tests were chosen after the data had been tabulated. They are therefore exploratory, and no correction for multiplicity was applied. Three sensitivity analyses test the primary contrast:
-- (a) excluding papers whose evaluated setup models no human role;
+All tests were chosen after the data had been tabulated. They are therefore exploratory. Nominal p-values are reported, together with Holm-adjusted values for the family of five contrasts in Table XIII. Four sensitivity analyses test the primary contrast:
+- (a) restricting to studies with a physical platform, which excludes abstract agents and sensor-free simulations (a restriction to studies that model a human role was planned but cannot be estimated, because only one Fully Autonomous study models one);
 - (b) restricting to papers with RP ≥ 2;
-- (c) re-coding the boundary cases identified by the reliability check.
+- (c) re-coding the boundary cases identified by the reliability check;
+- (d) adding the two possibly misexcluded records identified in Section II-E, coded as Fully Autonomous and simulation-only.
 
 Analysis scripts and the extraction table are provided as supplementary material.
 
@@ -645,9 +646,11 @@ Three further indicators point the same way:
 
 The contrast between Fully Autonomous studies and studies with a human in the mission was tested exploratorily (Table XIII). Fully Autonomous studies had lower odds on every validation indicator, but the evidence differs by outcome:
 
-- **Clearest:** any physical testing (odds ratio (OR) 0.14, 95% CI 0.013–0.87, p = 0.018) and validation depth (Mann–Whitney p = 0.024).
+- **Smallest nominal p-values:** any physical testing (odds ratio (OR) 0.14, 95% CI 0.013–0.87, p = 0.018) and validation depth (Mann–Whitney p = 0.024).
 - **Binary field-testing outcome:** significant at the 0.05 level only under the lenient coding (OR 0.13, p = 0.014; strict: OR 0.17, 95% CI 0.013–1.43, p = 0.060).
-- **Four modes together:** an exact test of mode against field testing gave p = 0.027 (strict) and p = 0.006 (lenient).
+- **Four modes together:** the exact Freeman–Halton test of mode against field testing gave p = 0.029 (strict) and p = 0.006 (lenient).
+
+After Holm adjustment across the five contrasts in Table XIII, no contrast stays below 0.05 (adjusted p = 0.070–0.085). The evidence is therefore consistent in direction but statistically modest.
 
 The rates are not ordered along the autonomy scale. Supervisory Control (25%) falls below Teleoperation (60%) and Shared-Collaborative Control (0%) falls below both, so the data support a contrast between Fully Autonomous studies and the rest, not a monotonic gradient.
 
@@ -708,7 +711,7 @@ Validation-depth and reproducibility (VDR) scores averaged:
 - 3.33 for Shared-Collaborative Control;
 - 3.81 for Fully Autonomous studies.
 
-Reproducibility (RP) did not differ between Fully Autonomous studies and studies with a human in the mission (mean 2.11 against 2.08; p = 0.83). Most studies (35 of 39) report repeated trials or a baseline comparison. Only 5 of 39 (12.8%; 95% CI 5.6–26.7) link to publicly released code or data.
+No difference in reproducibility (RP) was detected between Fully Autonomous studies and studies with a human in the mission (mean 2.11 against 2.08; p = 0.83). Most studies (35 of 39) report repeated trials or a baseline comparison. Only 5 of 39 (12.8%; 95% CI 5.6–26.7) link to publicly released code or data.
 
 **TABLE XVI.** Self-reported realism limitations and reporting-quality indicators.
 
@@ -721,12 +724,12 @@ Reproducibility (RP) did not differ between Fully Autonomous studies and studies
 
 #### G. Sensitivity Analyses
 
-Table XVII tests the robustness of the Fully Autonomous contrast. The direction never reverses, but the strength of the evidence depends on what is included:
+Table XVII tests the robustness of the Fully Autonomous contrast. The direction never reverses, but the strength of the evidence depends on what is included. Restriction (a) removes 10 Fully Autonomous studies, all of them simulation-only, so part of its attenuation is built in by construction. What it shows is that the gap is concentrated in abstract and sensor-free simulation studies:
 
 - **Studies with a physical platform only:** excluding abstract agents and sensor-free simulations removes 10 Fully Autonomous and no human-in-mission studies. The contrast then weakens: field tests 2 of 17 against 4 of 12 (p = 0.20); any physical test 11 of 17 against 10 of 12 (p = 0.41).
 - **Boundary cases re-coded with the independent blind codes:** strict field tests 3 of 27 against 3 of 12 (p = 0.35).
-- **Restricting to studies with RP ≥ 2:** results barely change.
-- **Adding the two possibly misexcluded records (Section II-E):** results barely change.
+- **Restricting to studies with RP ≥ 2:** the results change little.
+- **Adding the two possibly misexcluded records (Section II-E):** the results change little (strict field testing, p = 0.050, not significant).
 
 Too few Fully Autonomous studies model a human role (1 of 27) for the contrast to be estimated within that subgroup. Section V-A interprets these patterns.
 
@@ -843,7 +846,7 @@ Four of the seven are simulation-only, two include partial physical testing, and
 
 - Cruz Ulloa et al. (2026): a bio-inspired quadruped that uses material-aware risk mapping to reduce slippage, tested in an indoor arena with mixed-friction surfaces.
 - Vani et al. (2026): a modular hexapod with LoRa and Wi-Fi links. It offers both manual and autonomous modes, and its reported tests do not state which mode was used.
-- Cho et al. (2026): IMPACT-Agent, the clearest example of how the Fully Autonomous label should be read. Its multimodal-LLM-driven UGV succeeded in 4 of 10 path-planning trials with chain-of-thought prompting, a rate the authors call modest for safety-critical use. Its perception task reached up to 86% mAP. The authors recommend a human-supervised architecture in which the model reasons at a high level under meaningful human control. That architecture was not implemented in the reported experiments, which tested end-to-end autonomous control on a tabletop mock-up.
+- Cho et al. (2026): IMPACT-Agent, the clearest example of how the Fully Autonomous label should be read. Its multimodal-LLM-driven UGV reached a 40% path-planning success rate with chain-of-thought prompting, a rate the authors call modest for safety-critical use. Its perception task reached up to 86% mAP. The authors recommend a human-supervised architecture in which the model reasons at a high level under meaningful human control. That architecture was not implemented in the reported experiments, which tested end-to-end autonomous control on a tabletop mock-up.
 
 Across the clusters, physical evaluation is rare among Fully Autonomous coordination and planning algorithms. Where it does occur, it is usually confined to one platform, a laboratory, or a constructed site.
 
@@ -871,12 +874,12 @@ This section interprets the results, compares them with external evidence, sets 
 
 #### A. Why Fully Autonomous Studies Are Validated Less Often
 
-Fully Autonomous studies make up 69.2% of the corpus. They reached physical testing about half as often as studies with a human in the mission, and a field site less often still (Section III-D). The direction of this difference held under every coding and sensitivity analysis. Its strength did not: it was clear for any physical testing and for validation depth, but borderline for strict field testing (p = 0.060). It also weakened markedly once abstract agents and sensor-free simulations were excluded (Table XVII).
+Fully Autonomous studies make up 69.2% of the corpus. They reached physical testing about half as often as studies with a human in the mission, and a field site less often still (Section III-D). The direction of this difference held under every coding and sensitivity analysis. Its strength did not. The nominal p-values were smallest for any physical testing (0.018) and validation depth (0.024), and borderline for strict field testing (0.060). None survives Holm adjustment across the five contrasts. The difference also weakened markedly once abstract agents and sensor-free simulations were excluded (Table XVII).
 
-We read this pattern as mainly a difference in *research genre*, not an intrinsic property of autonomy. Most Fully Autonomous studies contribute an algorithm for coordination, coverage, or planning. They evaluate it on idealized maps or abstract agents, and none of the 12 multi-robot coordination studies reached a field test (Table XVIII). Human-in-mission studies, by contrast, usually contribute a system: a platform, an interface, or an operator workflow. A system can hardly be evaluated without being built, and once built it is easier to take into the field. Two observations support this reading:
+We interpret this pattern, cautiously, as mainly a difference in *research genre*, not an intrinsic property of autonomy. Most Fully Autonomous studies contribute an algorithm for coordination, coverage, or planning. They evaluate it on idealized maps or abstract agents, and none of the 12 multi-robot coordination studies reached a field test (Table XVIII). Human-in-mission studies, by contrast, usually contribute a system: a platform, an interface, or an operator workflow. A system can hardly be evaluated without being built, and once built it is easier to take into the field. Two observations are consistent with this reading, although neither proves it:
 
-- The contrast largely disappears when only studies with a physical platform are compared.
-- Reproducibility scores do not differ between the two groups. The difference therefore lies in *where* studies are tested, not in how carefully they are reported.
+- The gap is concentrated in abstract and sensor-free simulation studies, and it weakens when only studies with a physical platform are compared. This restriction removes only simulation-only Fully Autonomous studies, so part of the attenuation follows by construction.
+- No difference in reproducibility scores was detected between the two groups. This suggests the difference lies in *where* studies are tested rather than in how carefully they are reported.
 
 This reading is consistent with the broader robotics literature:
 
@@ -898,7 +901,7 @@ In 26 of 27 Fully Autonomous studies the evaluated mission contained no human ro
 
 #### C. Realism and Reproducibility
 
-Two thirds of the studies (66.7%) state that their test environment omitted or idealized the conditions of the target disaster. Under a broader reading, 84.6% mention some real-world-condition gap. Naming a specific hazard did not make the acknowledgment less likely: such acknowledgments were somewhat more frequent among hazard-specific studies than among generic ones (80.0% against 58.3%, p = 0.30). Reproducibility was limited by data and code availability, not by reporting detail. Most studies report repeated trials or baselines, but only 5 of 39 release code or data. Without released code or data, independent groups cannot test the simulation-trained Fully Autonomous methods that dominate the corpus on new terrain or hardware.
+Two thirds of the studies (66.7%) state that their test environment omitted or idealized the conditions of the target disaster. Under a broader reading, 84.6% mention some real-world-condition gap. No difference was detected between hazard-specific and generic studies (80.0% against 58.3%, p = 0.30). Naming a hazard therefore did not make acknowledgment of idealized conditions less likely. Reproducibility was limited by data and code availability, not by reporting detail. Most studies report repeated trials or baselines, but only 5 of 39 release code or data. Without released code or data, independent groups cannot test the simulation-trained Fully Autonomous methods that dominate the corpus on new terrain or hardware.
 
 #### D. Threats to Validity
 
@@ -914,7 +917,7 @@ We group the threats to validity into four types.
 - One author identified the records. Of the 130 cataloged records, 52 came from Google Scholar or AI-assisted discovery (ChatGPT, Gemini), and 21 of the 39 included studies came through these routes. AI-assisted discovery is not reproducible. Its coverage may be biased toward highly visible papers, and it may have missed eligible studies entirely.
 - The search used two short phrases on publisher platforms and did not cover Scopus or Web of Science. A reproducible bibliographic search with a full Boolean strategy would probably find additional eligible studies.
 - Two screeners assessed every record, but their individual decisions were not kept, so screening agreement cannot be quantified.
-- A post hoc check found two exclusions (#70 and #83) that are hard to reconcile with one inclusion, under C2. Adding the two records does not change the conclusions (Table XVII, row d), but it shows that the C2 boundary for abstract agents was not applied uniformly.
+- A post hoc check found two excluded records (#70 and #83 in the supplementary screening log), both abstract grid-world agents, that are hard to reconcile under C2 with one included study of the same kind (Xue et al., 2025). Adding the two records does not change the conclusions (Table XVII, row d), but it shows that the C2 boundary for abstract agents was not applied uniformly.
 - Data were extracted by an AI assistant from full texts. The original extraction workbook was not retained, so the released table is a page-referenced re-extraction. Re-extraction reproduced every mode and platform label but changed several validation, sensor, architecture, and scenario codes relative to an earlier draft of this review.
 - Reliability was assessed only by a post hoc AI recoding (κ = 0.79), not by an independent human coder.
 
@@ -936,7 +939,7 @@ The results point to five reporting practices that would make SAR robotics studi
 1. **Report validation depth explicitly:** simulation fidelity, laboratory or mock facility, or a real site, with the environmental conditions actually present.
 2. **State the human role in the evaluated mission,** including the role a deployed system would require. A study should not leave the reader to infer that role from the absence of an operator in simulation.
 3. **Describe autonomy per function** (perception, decision, action) rather than with one label.
-4. **Decompose performance** where perception and control differ. In Cho et al. (2026), perception reached up to 86% mAP while control succeeded in 4 of 10 trials.
+4. **Decompose performance** where perception and control differ. In Cho et al. (2026), perception reached up to 86% mAP while control succeeded in 40% of trials.
 5. **Release code, simulation environments, and data** so that methods trained in simulation can be tested elsewhere.
 
 #### F. Future Research Directions
@@ -998,7 +1001,7 @@ These reviews show that field deployment is rare in SAR robotics (Sinha et al., 
 This review addresses that question for the 2025–2026 primary literature, the period immediately after the corpus of Kareem et al. (2026a). Its contributions are as follows:
 
 1. **A classification of 39 studies into four autonomy/HRI modes.** The modes are Teleoperation, Supervisory Control, Shared-Collaborative Control, and Fully Autonomous. They are grounded in levels-of-automation theory and applied with explicit decision rules, a released coding manual, and a reliability check.
-2. **To our knowledge, the first cross-tabulation in a SAR robotics review of validation depth against autonomy mode.** Fully Autonomous studies (69.2% of the corpus) were evaluated physically and in the field markedly less often than studies with a human in the mission. Sensitivity analyses show that this gap reflects the algorithm-first, simulation-based character of most Fully Autonomous research more than autonomy as such.
+2. **To our knowledge, the first cross-tabulation in a SAR robotics review of validation depth against autonomy mode.** Fully Autonomous studies (69.2% of the corpus) were evaluated physically and in the field markedly less often than studies with a human in the mission. The difference is consistent in direction but statistically modest. It is concentrated in abstract and sensor-free simulation studies, which suggests that it reflects the algorithm-first character of most Fully Autonomous research more than autonomy as such.
 3. **Evidence on how the field reports realism and reproducibility.** Two thirds of the studies acknowledge idealized test conditions, but only 5 of 39 release code or data.
 4. **Reporting recommendations and a public data package.** The package contains the extraction table with page references, the screening log, the coding manual, and the analysis scripts.
 
@@ -1043,7 +1046,7 @@ Robots are increasingly proposed for disaster search and rescue (SAR), but, to o
 
 ### VI. CONCLUSION
 
-This review classified 39 disaster SAR robotics studies published in 2025–2026 into four autonomy/HRI modes and cross-tabulated those modes against how the studies were validated. Fully Autonomous systems dominate the current literature (69.2%). As a group, however, they were tested physically, and at real sites, much less often than systems that keep a human in the mission. The difference held in direction under every coding examined. It was statistically clear for physical testing and validation depth, and borderline for strict field testing. It weakened markedly when abstract, sensor-free simulations were excluded. We therefore read it mainly as a feature of how autonomous SAR research is done (algorithm-first, simulation-based, and usually without any modeled operator), not as a property of autonomy itself.
+This review classified 39 disaster SAR robotics studies published in 2025–2026 into four autonomy/HRI modes and cross-tabulated those modes against how the studies were validated. Fully Autonomous systems dominate the current literature (69.2%). As a group, however, they were tested physically, and at real sites, much less often than systems that keep a human in the mission. The difference held in direction under every coding examined. It was statistically modest: the nominal p-values were below 0.05 for physical testing and validation depth and borderline for strict field testing, and none survived multiplicity adjustment. It weakened markedly when abstract, sensor-free simulations were excluded. We therefore read it, cautiously, as a feature of how autonomous SAR research is done (algorithm-first, simulation-based, and usually without any modeled operator), not as a property of autonomy itself.
 
 Two further findings bear on how the field reports its work. Two thirds of the studies acknowledge that their test conditions were idealized. Only 5 of 39 release code or data.
 
@@ -1580,6 +1583,63 @@ Evidence and decision:
 - Evidence: `research_outputs/2026-11-08_extraction-rebuilder_report.md` and `data/recomputed_tables.md`.
 - The Results, Abstract and Conclusion are left unchanged pending the authors' decision.
 - Caveat: the rebuilt codes are themselves single-stream AI coding. The borderline calls are listed for human verification.
+
+**[2026-11-09, entry 6: Results, Taxonomy, Discussion, Introduction, front matter and references rewritten (audit IDs C2–C10, M4–M6, M10–M30, m1–m26)]**
+
+*Decision.* The user asked me to take the decision a senior Q1 author would take (2026-11-09).
+- The strict coding is primary and the lenient coding is reported as sensitivity.
+- The rebuilt data replace the lost-workbook numbers throughout.
+- The headline claim is reframed. The Fully Autonomous (FA) vs. human-in-mission difference holds in direction under every coding. It is clear for any physical testing (p = 0.018) and for validation depth (p = 0.024), but borderline for strict field testing (p = 0.060). It attenuates when abstract or sensor-free simulations are excluded. It is therefore interpreted as an effect of research genre. It is not presented as an intrinsic autonomy gradient, and the "inverse relationship / gradient" language was removed.
+
+*Locked facts superseded, with evidence in `data/analysis_output.md` (from `data/analysis.py` on `data/extraction_table.csv`):*
+
+| Locked fact | Old value | New value |
+|---|---|---|
+| FA field-tested | 2/27 | 2/27 strict, 3/27 lenient |
+| Teleoperation / Supervisory field-tested ("60–75%") | 60–75% | 3/5 and 1/4 strict (3/5 and 3/4 lenient) |
+| UAV vs Hybrid field-tested | 1/13 vs 4/7 | 3/13 vs 3/7 (p = 0.61; descriptive only) |
+| Environmental-realism limitation | 35/39 | 26/39 literal rule (33/39 broad) |
+
+Unchanged: mode split 27/5/4/3; platform split; 130/125/39/86.
+
+*Section changes:*
+- **III. Results:** rebuilt. New Tables XI–XVII cover strict and lenient validation, mode × validation with confidence intervals, exploratory contrasts, platform × validation, scenario, realism and reporting quality, and sensitivity analyses. Sensor, architecture and scenario tables were updated from the CSV.
+- **IV. Taxonomy:** every corpus-audit correction is applied.
+  - [21] scenario corrected to mountain flash flood; its comparison condition and measures corrected.
+  - [20] reported as per-class mAP, with no human subjects.
+  - [19] adaptive swarm evaluated only in simulation.
+  - [15] tested in a lab tunnel; [16] venues separated; [17] lab arena.
+  - [10] sub-modes noted; navigation deferred in [13] and [14] (not [11] and [12]).
+  - [25] false positives and negatives corrected; degradation stated as simulation-only.
+  - [27] now described.
+  - "Little or no centralized control" claim removed.
+  - [42] offline evaluation; [43] described as a shore station steering a boat; [44] field test.
+  - [47] "modest"; tested on a tabletop mock-up.
+  - [48] mode ambiguity flagged.
+  - Operator-state generalization removed; Fig. 7 reordered as bands without equal spacing.
+  - FA cluster × validation added as Table XVIII. This also resolves the old contradiction between lines 595 and 601.
+- **V. Discussion:**
+  - Mechanism, comparison with external sim-to-real literature, and the construct issue of the FA label.
+  - Full threats-to-validity section (construct, internal, external, conclusion), restoring the truthful limitations: AI-assisted discovery, narrow search, screener records, AI extraction, AI-only reliability check.
+  - Reporting recommendations.
+  - Trend claims and the one-paper generalization removed.
+- **I. Introduction:**
+  - [6] corrected (15 platforms, 14 classified, autonomy coded); [5] corrected ("over 190", 8 categories, 4.2% field deployment); Tong [8] date logic fixed.
+  - Six verified competing reviews added to Table I.
+  - Survival-window claims now cite peer-reviewed disaster-medicine sources. [2] (arXiv) and [3] (NBC News) are no longer cited.
+  - Afghanistan figure now cited to CRED. Roadmap added. Novelty hedged ("to our knowledge"), backed by `research_outputs/2026-11-08_literature-scout_novelty_scan_v2.md`.
+- **Front matter:**
+  - Title now reflects all four modes and the validation focus.
+  - Abstract is 249 words, structured, with confidence intervals, limitations and registration.
+  - Seven keywords (JFR).
+  - Conclusion aligned with the new findings and given a limitations sentence.
+  - Back matter added (AI-use, funding, COI, CRediT, data availability, ethics), with author placeholders.
+- **References:** converted to APA author-date for JFR (`data/references.py`, `data/convert_citations.py`). The new APA list is appended to Sec. 15, and the numbered list is kept as the working record. 72 references are cited, all in the list. Entries marked UNVERIFIED go to citation-verifier.
+- **Figures:**
+  - Figs. 4–7 regenerated from the CSV (`data/make_figures.py`). Fig. 6 now shows strict and lenient bars, Wilson CIs and n labels. The palette was validated and lenient bars are hatched for greyscale.
+  - Fig. 2 points to the new two-column PRISMA diagram.
+  - The old figures are backed up in the session scratchpad.
+- **Cross-references:** checked by script. Tables I–XVIII are sequential and each is cited before it appears. Figs. 1–7 are each cited and every image path resolves. No dangling section references.
 
 ## 17. Figures (item 11) — built and embedded *(new this handoff)*
 
