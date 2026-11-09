@@ -433,7 +433,7 @@ Borderline cases were resolved with a single tie-break: who decides each action,
 - one between Supervisory Control and Fully Autonomous, which turned on whether goals set before the mission count as supervision;
 - one study that offers both manual and autonomous modes without stating which was evaluated.
 
-Because both codings were AI-assisted, these figures measure how consistently the written rules can be applied. They are not agreement between independent human raters. [[AUTHOR INPUT NEEDED: a co-author who did not assign the original labels should complete the blind human second-coding sheet provided in the supplementary material; report that κ here in place of, or alongside, the AI check.]]
+Because both codings were AI-assisted, these figures measure how consistently the written rules can be applied. They are not agreement between independent human raters. In a further post hoc pass, a third AI session coded each study by function, recording whether the machine, the human, or both held information acquisition, analysis, decision, and action in the evaluated configuration (Parasuraman et al., 2000). Every code is supported by page-referenced evidence. The designed control paradigm implied by these function codes matched the mode labels for 36 of 39 studies. The three exceptions are boundary cases discussed in Section IV. [[AUTHOR INPUT NEEDED: a co-author who did not assign the original labels should complete the blind human second-coding sheet provided in the supplementary material; report that κ here in place of, or alongside, the AI check.]]
 
 #### H. Quality Appraisal
 
@@ -506,7 +506,7 @@ This section reports the coded characteristics of the 39 included studies, addre
 
 Fully Autonomous systems dominate the corpus: 27 of 39 studies (69.2%; 95% CI 53.6–81.4). Teleoperation accounts for 5 studies (12.8%), Supervisory Control for 4 (10.3%), and Shared-Collaborative Control for 3 (7.7%; Table VI).
 
-The Fully Autonomous label has to be read alongside how these studies were evaluated. In none of the 27 does a human, real or simulated, make or approve decisions during the evaluated mission. In the three human-in-the-loop modes, a human takes part in the evaluated mission in 9 of 12 studies (Table XII). For most of the corpus, then, "Fully Autonomous" describes an experimental setup in which no operator was modeled. It does not describe a system that has been shown to operate without one.
+The Fully Autonomous label has to be read alongside how these studies were evaluated. In none of the 27 does a human, real or simulated, make or approve decisions during the evaluated mission. In the three human-in-the-loop modes, a human takes part in the evaluated mission in 8 of 12 studies (Table XII). For most of the corpus, then, "Fully Autonomous" describes an experimental setup in which no operator was modeled. It does not describe a system that has been shown to operate without one.
 
 **TABLE VI.** Autonomy/HRI mode distribution (N = 39).
 
@@ -636,7 +636,7 @@ Fully Autonomous studies:
 
 Human-in-the-loop studies:
 - field-tested: 4 of 12 (33.3%; 95% CI 13.8–60.9) under the strict coding, and 6 of 12 (50.0%) under the lenient coding;
-- a human took part in the evaluated mission in 9 of 12.
+- a human took part in the evaluated mission in 8 of 12.
 
 Any physical testing showed the same direction (11 of 27 [40.7%] against 9 of 12 [75.0%]), as did mean validation depth (VD, 1–3: 1.70 against 2.25).
 
@@ -646,9 +646,9 @@ Any physical testing showed the same direction (11 of 27 [40.7%] against 9 of 12
 |---|---|---|---|---|---|---|---|---|---|
 | Teleoperation (n = 5) | 1 | 1 | 0 | 3 | 60.0 (23.1–88.2) | 60.0 | 80.0 | 3/5 | 2.40 |
 | Supervisory Control (n = 4) | 0 | 3 | 0 | 1 | 25.0 (4.6–69.9) | 75.0 | 100 | 3/4 | 2.75 |
-| Shared-Collaborative (n = 3) | 2 | 1 | 0 | 0 | 0.0 (0.0–56.1) | 0.0 | 33.3 | 3/3 | 1.33 |
+| Shared-Collaborative (n = 3) | 2 | 1 | 0 | 0 | 0.0 (0.0–56.1) | 0.0 | 33.3 | 2/3 | 1.33 |
 | Fully Autonomous (n = 27) | 16 | 7 | 2 | 2 | 7.4 (2.1–23.4) | 11.1 | 40.7 | 0/27 | 1.70 |
-| **All (N = 39)** | **19** | **12** | **2** | **6** | 15.4 (7.2–29.7) | 23.1 | 51.3 | 9/39 | 1.87 |
+| **All (N = 39)** | **19** | **12** | **2** | **6** | 15.4 (7.2–29.7) | 23.1 | 51.3 | 8/39 | 1.87 |
 
 ![Fig. 6. Real-world field-testing rate by autonomy/HRI mode under the strict (primary) and lenient (sensitivity) codings, with 95% Wilson confidence intervals and group sizes.](assets/figures/fig_autonomy_validation.png)
 
@@ -946,7 +946,22 @@ The practical consequence is interpretive. The prevalence of Fully Autonomous sy
 In none of the 27 Fully Autonomous studies did a human, real or simulated, take part in the evaluated mission, so there was no operator to remove. In these studies, "no human in the loop" is partly a property of the test setup. That has two consequences.
 
 1. The comparison between Fully Autonomous and human-in-the-loop studies is not a comparison of systems that differ only in autonomy. Mode, contribution type, and evaluation setting are confounded, and a review cannot separate them.
-2. Single-label coding hides the functional allocation that matters in the field. Parasuraman et al. distinguished information acquisition, analysis, decision, and action, and noted that each can be automated to a different degree (Parasuraman et al., 2000). A study can automate navigation fully while leaving victim confirmation to a human. A per-function autonomy profile would describe such systems more faithfully than a single mode, and we recommend it for future reviews and for primary studies.
+2. Single-label coding hides the functional allocation that matters in the field. Parasuraman et al. (2000) distinguished four functions (information acquisition, analysis, decision, and action) and noted that each can be automated to a different degree. To test what a single label hides, every study was also coded post hoc by function (Section II-G). Table XX summarizes the result, and three points stand out:
+   - **Analysis is automated almost everywhere.** It is machine-held in 34 of 39 studies, including 3 of the 5 Teleoperation studies, which automate victim detection.
+   - **The modes separate on decision and action, not on perception.** In Teleoperation the human held the decision function in all five studies. In Supervisory Control the machine held action in all four. Most Fully Autonomous studies automate all four functions (24 of 27).
+   - **Shared-Collaborative studies split authority in a different way each time.** The three studies have three different profiles, which helps explain why this mode was the least reliably coded.
+
+   A per-function profile therefore describes these systems more faithfully than a single mode. We recommend it for future reviews and for primary studies.
+
+**TABLE XX.** Holder of each function by autonomy mode (post hoc AI-assisted coding; counts of studies with the function held by the machine / shared / human, M/S/H).
+
+| Mode | Acquisition | Analysis | Decision | Action |
+|---|---|---|---|---|
+| Teleoperation (n = 5) | 0/0/5 | 3/1/1 | 0/0/5 | 0/1/4 |
+| Supervisory Control (n = 4) | 2/1/1 | 3/0/1 | 0/3/1 | 4/0/0 |
+| Shared-Collaborative (n = 3) | 0/1/2 | 1/1/1 | 0/2/1 | 1/0/2 |
+| Fully Autonomous (n = 27) | 24/2/1 | 27/0/0 | 25/1/1 | 25/2/0 |
+| **All (N = 39)** | 26/4/9 | 34/2/3 | 25/6/8 | 30/3/6 |
 
 #### C. Realism and Reproducibility
 
@@ -1715,6 +1730,80 @@ Unchanged: mode split 27/5/4/3; platform split; 130/125/39/86.
   - Fig. 2 points to the new two-column PRISMA diagram.
   - The old figures are backed up in the session scratchpad.
 - **Cross-references:** checked by script. Tables I–XVIII are sequential and each is cited before it appears. Figs. 1–7 are each cited and every image path resolves. No dangling section references.
+
+**[2026-11-09, entry 7: round-2 revision after the stats check, the PRISMA audit, citation verification and simulated Reviewer 2 (Reject)]**
+
+Evidence for this round:
+- `research_outputs/2026-11-09_stats-checker_report.md`
+- `research_outputs/2026-11-09_methodology-auditor_prisma_audit.md`
+- `research_outputs/2026-11-09_citation-verifier_apa_refs.md`
+- `research_outputs/2026-11-09_q1-reviewer_round1.md`
+- `research_outputs/2026-11-09_literature-scout_added_refs.md`
+
+*Data recodes.* All three were made with PDF evidence. The pre-round copy of the table is in the session scratchpad.
+
+| Study | Change | Evidence |
+|---|---|---|
+| [14] Khattab | Validation: Prototype bench → Simulation only; VD 2 → 1 | Physical prototype built, but performance evaluated only in MATLAB with synthetic data (p22) |
+| [17] Ruan | Human in evaluated mission: Y → N | Predefined waypoints, no live operator (p8) |
+| [42] Strand | Human in evaluated mission: Y → N | Offline evaluation of prerecorded images; the data-collection pilot is not part of the evaluated mission |
+
+- The human-role rule was clarified: a human makes or approves decisions, or controls the robot, during the evaluated mission.
+- An `identification_route` column was added from `paperlinks.xlsx`.
+
+*Locked-fact consequences.* `.claude/CLAUDE.md` was updated accordingly.
+
+| Measure | Before | After |
+|---|---|---|
+| Validation, strict (Simulation / Partial / Field / Bench) | 18 / 12 / 6 / 3 | 19 / 12 / 6 / 2 |
+| Any physical test, human-in-the-loop modes | 10/12 | 9/12 (p = 0.082, previously 0.018) |
+| Validation-depth Mann–Whitney p | 0.024 | 0.060 |
+| Human in evaluated mission, FA studies | 1/27 | 0/27 |
+| Human in evaluated mission, all studies | 11/39 | 9/39 |
+
+- Exact Freeman–Halton test: p = 0.029 (strict) and 0.006 (lenient), replacing the Monte Carlo label.
+- Holm adjustment over the five contrasts: 0.071–0.128, so none is significant.
+
+*Manuscript changes.*
+- **Framing.** The headline is now descriptive: FA predominance; FA evaluation dominated by simulation, with no human in any evaluated mission; 15% of studies field-tested overall. The FA vs human-in-the-loop difference is stated as consistent in direction but not statistically established.
+- **Title** changed to "Autonomy Modes and Validation Depth in Disaster Search-and-Rescue Robotics: A Systematic Review of the 2025–2026 Literature".
+- **Abstract** now leads with the declared primary outcome (strict field testing) and reports the Holm result and the attenuation.
+- **"Human-in-mission" renamed "human-in-the-loop"** throughout. Designed mode and human presence in the evaluation are now reported as separate variables.
+- **κ provenance stated.** Both codings are AI-assisted, and the four disagreements are described accurately.
+- **Methods**
+  - II-B: cataloged records are a selection from result lists, and hit counts were not recorded (AUTHOR INPUT). All 130 records come from Q1/Q2 journals, and the assertion that ranking was not used has been removed and replaced with an AUTHOR INPUT question. The PRISMA-S one-sentence statements were added.
+  - II-F: corrected to "four fields + sensor flags".
+  - II-H: the unverifiable attribution to a Kareem et al. 1–6 score was removed. The appraisal is now described as designed for this review and explicitly not a risk-of-bias tool.
+  - II-I: lists all five sensitivity analyses (a)–(e), the Mann–Whitney and Fisher descriptive tests, Holm adjustment, and the reporting-bias and certainty approach.
+  - Table V: a first-criterion column was added (C1 63, C2 22, C3 1).
+- **Results**
+  - III-D and III-G were rebuilt from the new `analysis_output.md`.
+  - Table XIII now has a Holm column.
+  - Sensitivity analysis (e), publisher-identified studies only, was added.
+- **Discussion**
+  - V-A: the comparison with Sinha et al. now uses their 14.7% experimental-field category.
+  - New Table XIX lists the 9 field or competition-venue tests and their reported limitations, with a synthesis of field failure modes and the ASTM E54.09 test methods.
+  - V-D: added selection-before-cataloging, the quartile pattern, the route difference in inclusion rate, reporting bias, and a qualitative confidence rating for each main finding.
+- **Introduction**
+  - Shuvo wording softened; CRED inference softened to the report's own "mega-disaster" attribution.
+  - Earlier surveys added: Liu & Nejat 2013, Queralta et al. 2020, Drew 2021, Murphy 2014.
+  - II-G now cites Yanco & Drury 2004 and Kim et al. 2024.
+- **References.** 79 references (7 added, all verified at source). Srijiranon's year is now 2026. Citation-verifier corrections were applied in `data/references.py`, and the list was regenerated by `data/rebuild_reflist.py`.
+- **Supplement**
+  - The PRISMA 2020 checklist, PRISMA-S checklist and search protocol were added (by methodology-auditor).
+  - Internal working references were scrubbed from S2, S3 and the coding manual. Internal comparison columns and PDF file names were dropped from the public copies.
+  - An identification-route column was added to the screening log.
+
+*Still blocked on the authors:*
+- the reproducible database search;
+- search dates and hit counts;
+- the quartile question;
+- Google Scholar queries and AI prompts;
+- screener identities and the meaning of "averaged out";
+- who verified the AI extraction and the quality scores;
+- the human second-coder κ;
+- the AI-verification sentence;
+- repository DOI, funding, COI and CRediT.
 
 ## 17. Figures (item 11) — built and embedded *(new this handoff)*
 

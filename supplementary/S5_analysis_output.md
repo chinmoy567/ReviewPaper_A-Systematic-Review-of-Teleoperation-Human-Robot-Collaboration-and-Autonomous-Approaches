@@ -134,9 +134,9 @@
 |---|---|---|---|---|---|---|---|
 | Teleoperation | 3/5 (60.0%; 95% CI 23.1–88.2) | 3/5 (60.0%; 95% CI 23.1–88.2) | 4/5 (80.0%; 95% CI 37.6–96.4) | 3/5 | 2.40 | 2.00 | 4.40 |
 | Supervisory Control | 1/4 (25.0%; 95% CI 4.6–69.9) | 3/4 (75.0%; 95% CI 30.1–95.4) | 4/4 (100.0%; 95% CI 51.0–100.0) | 3/4 | 2.75 | 2.25 | 5.00 |
-| Shared-Collaborative Control | 0/3 (0.0%; 95% CI 0.0–56.1) | 0/3 (0.0%; 95% CI 0.0–56.1) | 1/3 (33.3%; 95% CI 6.1–79.2) | 3/3 | 1.33 | 2.00 | 3.33 |
+| Shared-Collaborative Control | 0/3 (0.0%; 95% CI 0.0–56.1) | 0/3 (0.0%; 95% CI 0.0–56.1) | 1/3 (33.3%; 95% CI 6.1–79.2) | 2/3 | 1.33 | 2.00 | 3.33 |
 | Fully Autonomous | 2/27 (7.4%; 95% CI 2.1–23.4) | 3/27 (11.1%; 95% CI 3.9–28.1) | 11/27 (40.7%; 95% CI 24.5–59.3) | 0/27 | 1.70 | 2.11 | 3.81 |
-| ALL | 6/39 (15.4%; 95% CI 7.2–29.7) | 9/39 (23.1%; 95% CI 12.6–38.3) | 20/39 (51.3%; 95% CI 36.2–66.1) | 9/39 | 1.87 | 2.10 | 3.97 |
+| ALL | 6/39 (15.4%; 95% CI 7.2–29.7) | 9/39 (23.1%; 95% CI 12.6–38.3) | 20/39 (51.3%; 95% CI 36.2–66.1) | 8/39 | 1.87 | 2.10 | 3.97 |
 
 ### Platform rates
 
@@ -179,7 +179,7 @@ Public code/data link (RP = 3): 5/39; baseline or variance reported: 35/39.
 |---|---|---|---|---|
 | Primary (all 39) | 27 / 12 | 2/27 vs 4/12, p = 0.060 | 3/27 vs 6/12, p = 0.014 | 11/27 vs 9/12, p = 0.082 |
 | (a) Only papers with a physical platform (excl. Abstract/Unspecified and sensor-free) | 17 / 12 | 2/17 vs 4/12, p = 0.198 | 3/17 vs 6/12, p = 0.106 | 11/17 vs 9/12, p = 0.694 |
-| (a') Only papers modeling a human role | 0 / 9 | not estimable | not estimable | not estimable |
+| (a') Only papers modeling a human role | 0 / 8 | not estimable | not estimable | not estimable |
 | (b) Only papers with RP ≥ 2 | 26 / 12 | 2/26 vs 4/12, p = 0.066 | 3/26 vs 6/12, p = 0.016 | 10/26 vs 9/12, p = 0.079 |
 | (c) Mode re-coded with the blind AI codes (boundary cases) | 27 / 12 | 3/27 vs 3/12, p = 0.348 | 4/27 vs 5/12, p = 0.102 | 11/27 vs 9/12, p = 0.082 |
 | (d) Adding excluded #70 and #83 as FA, simulation only (projection) | 29 / 12 | 2/29 vs 4/12, p = 0.050 | 3/29 vs 6/12, p = 0.011 | 11/29 vs 9/12, p = 0.043 |
